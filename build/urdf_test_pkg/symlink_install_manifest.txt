@@ -1,0 +1,17 @@
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/ament_index/resource_index/package_run_dependencies/urdf_test_pkg
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/ament_index/resource_index/parent_prefix_path/urdf_test_pkg
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/environment/ament_prefix_path.sh
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/environment/ament_prefix_path.dsv
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/environment/path.sh
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/environment/path.dsv
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/local_setup.bash
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/local_setup.sh
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/local_setup.zsh
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/local_setup.dsv
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.dsv
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/ament_index/resource_index/packages/urdf_test_pkg
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/cmake/urdf_test_pkgConfig.cmake
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/cmake/urdf_test_pkgConfig-version.cmake
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.xml
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/launch/display.launch.py
+/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/urdf/test_box.urdf

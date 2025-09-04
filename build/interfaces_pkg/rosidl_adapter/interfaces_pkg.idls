@@ -1,0 +1,16 @@
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/Point2D.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/Vector2.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/Pose2D.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/BoundingBox2D.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/BoundingBox3D.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/Mask.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/KeyPoint2D.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/KeyPoint2DArray.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/KeyPoint3D.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/KeyPoint3DArray.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/Detection.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/DetectionArray.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/LaneInfo.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/MotionCommand.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/TargetPoint.idl
+/home/euntaek/ws_mobile/build/interfaces_pkg/rosidl_adapter/interfaces_pkg:msg/PathPlanningResult.idl

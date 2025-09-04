@@ -1,0 +1,23 @@
+header:
+  stamp:
+    sec: 421
+    nanosec: 294000000
+  frame_id: gps_link
+status:
+  status: 0
+  service: 1
+latitude: 37.2889339
+longitude: 127.10762450000438
+altitude: 114.193
+position_covariance:
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+position_covariance_type: 2
+---

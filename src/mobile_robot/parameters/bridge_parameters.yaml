@@ -1,0 +1,88 @@
+# ===== ROS <-> Gazebo bridge config =====
+
+# Clock
+- gz_topic_name: "/clock"
+  ros_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# Robot Control Input (ROS /cmd_vel -> GZ /model/henes_t870/cmd_vel)
+- gz_topic_name: "/model/henes_t870/cmd_vel"
+  ros_topic_name: "/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  direction: ROS_TO_GZ
+  lazy: false
+
+# Joint States
+- gz_topic_name: "/model/henes_t870/joint_states"
+  ros_topic_name: "/joint_states"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  gz_type_name: "gz.msgs.Model"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# Odometry
+- gz_topic_name: "/model/henes_t870/odom"
+  ros_topic_name: "/odom"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# TF
+- gz_topic_name: "/tf"
+  ros_topic_name: "/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# LiDAR
+- gz_topic_name: "/scan"
+  ros_topic_name: "/scan"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  gz_type_name: "gz.msgs.LaserScan"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# IMU
+- gz_topic_name: "/imu"
+  ros_topic_name: "/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# Camera (lazy: 구독자 없으면 안 넘김 → 부하 줄이기)
+- gz_topic_name: "/camera/image"
+  ros_topic_name: "/camera/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+  lazy: true
+
+- gz_topic_name: "/camera/camera_info"
+  ros_topic_name: "/camera/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  direction: GZ_TO_ROS
+  lazy: true
+
+# GZ Model Pose → ROS Pose
+- gz_topic_name: "/world/driving_track_world/model/henes_t870/pose"
+  ros_topic_name: "/henes_t870/world_pose"
+  ros_type_name: "geometry_msgs/msg/Pose"
+  gz_type_name: "gz.msgs.Pose"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# Pose_V → TFMessage
+- gz_topic_name: "/world/driving_track_world/pose/info"
+  ros_topic_name: "/gz_pose_info"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+  lazy: false

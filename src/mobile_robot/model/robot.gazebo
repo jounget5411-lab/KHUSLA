@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="add_gz">
+    <!-- 바디(플라스틱): 바닥과의 마찰 낮게 -->
+    <gazebo reference="body_link">
+      <mu1>0.30</mu1>
+      <mu2>0.30</mu2>
+      <restitution_coefficient>0.0</restitution_coefficient>
+      <kp>500000</kp>
+      <kd>50</kd>
+    </gazebo>
+
+    <!-- 바퀴(고무): 정지마찰 ~1.0, 약간의 슬립 허용 -->
+    <gazebo reference="wheel1_link">
+      <mu1>1.00</mu1>
+      <mu2>1.00</mu2>
+      <slip1>0.02</slip1>
+      <slip2>0.02</slip2>
+      <kp>500000</kp>
+      <kd>50</kd>
+    </gazebo>
+    <gazebo reference="wheel2_link">
+      <mu1>1.00</mu1>
+      <mu2>1.00</mu2>
+      <slip1>0.02</slip1>
+      <slip2>0.02</slip2>
+      <kp>500000</kp>
+      <kd>50</kd>
+    </gazebo>
+    <gazebo reference="wheel3_link">
+      <mu1>1.00</mu1>
+      <mu2>1.00</mu2>
+      <slip1>0.02</slip1>
+      <slip2>0.02</slip2>
+      <kp>500000</kp>
+      <kd>50</kd>
+    </gazebo>
+    <gazebo reference="wheel4_link">
+      <mu1>1.00</mu1>
+      <mu2>1.00</mu2>
+      <slip1>0.02</slip1>
+      <slip2>0.02</slip2>
+      <kp>500000</kp>
+      <kd>50</kd>
+    </gazebo>
+
+
+
+
+    <gazebo>
+      <plugin filename="gz-sim-ackermann-steering-system"
+              name="gz::sim::systems::AckermannSteering">
+
+        <!-- (기존) 구동/조향 조인트 지정: 그대로 유지 -->
+        <left_joint>wheel2_joint</left_joint>     <!-- RL -->
+        <left_joint>fl_wheel_joint</left_joint>   <!-- FL -->
+        <right_joint>wheel1_joint</right_joint>   <!-- RR -->
+        <right_joint>fr_wheel_joint</right_joint> <!-- FR -->
+        <left_steering_joint>fl_steer_joint</left_steering_joint>
+        <right_steering_joint>fr_steer_joint</right_steering_joint>
+
+        <!-- (기존) 기하/한계: 그대로 유지 -->
+        <wheel_separation>0.70</wheel_separation>
+        <kingpin_width>0.66</kingpin_width>
+        <wheel_base>0.71</wheel_base>
+        <wheel_radius>0.135</wheel_radius>
+        <steering_limit>0.6</steering_limit>
+
+        <!-- ★ 토픽을 절대경로로 고정 (너가 이미 바꾼 대로) -->
+        <topic>/model/henes_t870/cmd_vel</topic>
+        <!-- ★ odom도 절대경로로 고정 (디버깅 쉬움) -->
+        <odom_topic>/model/henes_t870/odom</odom_topic>
+
+        <!-- ★ 속도/가속 제한을 확실히 열어준다 (없으면 버전에 따라 거의 0으로 clamp 되는 케이스 있음) -->
+        <min_velocity>-6.0</min_velocity>
+        <max_velocity> 6.0</max_velocity>
+        <min_acceleration>-20.0</min_acceleration>
+        <max_acceleration> 20.0</max_acceleration>
+        <max_steering_velocity>3.0</max_steering_velocity>
+        <command_timeout>0.0</command_timeout>
+        <!-- (옵션) 조향 속도가 너무 느리면 아래도 추가
+        <max_steering_velocity>2.0</max_steering_velocity>
+        -->
+
+        <!-- 프레임: 그대로 유지 가능 -->
+        <tf_topic>/tf</tf_topic>
+        <frame_id>odom</frame_id>
+        <child_frame_id>base_footprint</child_frame_id>
+        <odom_publish_frequency>30</odom_publish_frequency>
+      </plugin>
+
+
+      <!-- JointStatePublisher: 스티어링/프론트 스핀 조인트 추가 -->
+      <plugin filename="gz-sim-joint-state-publisher-system"
+              name="gz::sim::systems::JointStatePublisher">
+        <topic>joint_states</topic>
+        <joint_name>wheel1_joint</joint_name>
+        <joint_name>wheel2_joint</joint_name>
+        <joint_name>fr_wheel_joint</joint_name>
+        <joint_name>fl_wheel_joint</joint_name>
+        <joint_name>fr_steer_joint</joint_name>
+        <joint_name>fl_steer_joint</joint_name>
+      </plugin>
+    </gazebo>
+
+    <!-- Sensors 시스템 (기존 유지) -->
+    <gazebo>
+      <plugin filename="gz-sim-sensors-system"
+              name="gz::sim::systems::Sensors">
+        <render_engine>ogre2</render_engine>
+      </plugin>
+    </gazebo>
+
+    <!-- LiDAR 센서 (기존 유지) -->
+    <gazebo reference="lidar_link">
+      <sensor name="gpu_lidar" type="gpu_lidar">
+        <topic>/scan</topic>
+        <update_rate>5.5</update_rate>
+        <lidar>
+          <scan>
+            <horizontal>
+              <samples>364</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.14159</min_angle>
+              <max_angle>3.14159</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.15</min>
+            <max>12.0</max>
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </lidar>
+        <always_on>1</always_on>
+        <visualize>true</visualize>
+      </sensor>
+    </gazebo>
+
+
+    <gazebo>
+      <plugin filename="gz-sim-pose-publisher-system"
+              name="gz::sim::systems::PosePublisher">
+        <publish_world_pose>false</publish_world_pose>
+        <publish_model_pose>true</publish_model_pose>     <!-- ★ 이 모델의 /model/<name>/pose 토픽 생성 -->
+        <publish_link_pose>false</publish_link_pose>
+        <publish_sensor_pose>false</publish_sensor_pose>
+        <use_pose_vector_msg>false</use_pose_vector_msg>
+        <update_frequency>30</update_frequency>
+      </plugin>
+    </gazebo>
+
+
+
+
+          <!-- IMU system -->
+      <gazebo>
+        <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"/>
+      </gazebo>
+
+      <!-- IMU sensor attached to imu_link -->
+      <gazebo reference="imu_link">
+        <sensor name="imu_sensor" type="imu">
+          <topic>/imu</topic>
+          <update_rate>100</update_rate>
+          <always_on>1</always_on>
+          <visualize>false</visualize>
+          <!-- bridge될 때 header.frame_id로 들어갈 프레임 -->
+          <gz_frame_id>imu_link</gz_frame_id>
+
+          <!-- 현실적인 잡음/바이어스 예시 (원하면 조정 가능) -->
+          <imu>
+            <angular_velocity>
+              <x><noise type="gaussian"><mean>0.0</mean><stddev>2e-4</stddev><bias_mean>7.5e-6</bias_mean><bias_stddev>8e-7</bias_stddev></noise></x>
+              <y><noise type="gaussian"><mean>0.0</mean><stddev>2e-4</stddev><bias_mean>7.5e-6</bias_mean><bias_stddev>8e-7</bias_stddev></noise></y>
+              <z><noise type="gaussian"><mean>0.0</mean><stddev>2e-4</stddev><bias_mean>7.5e-6</bias_mean><bias_stddev>8e-7</bias_stddev></noise></z>
+            </angular_velocity>
+            <linear_acceleration>
+              <x><noise type="gaussian"><mean>0.0</mean><stddev>1.7e-2</stddev><bias_mean>0.1</bias_mean><bias_stddev>0.001</bias_stddev></noise></x>
+              <y><noise type="gaussian"><mean>0.0</mean><stddev>1.7e-2</stddev><bias_mean>0.1</bias_mean><bias_stddev>0.001</bias_stddev></noise></y>
+              <z><noise type="gaussian"><mean>0.0</mean><stddev>1.7e-2</stddev><bias_mean>0.1</bias_mean><bias_stddev>0.001</bias_stddev></noise></z>
+            </linear_acceleration>
+          </imu>
+        </sensor>
+      </gazebo>
+
+          <!-- RGB Camera on camera_link -->
+    <gazebo reference="camera_link">
+      <sensor name="front_rgb_camera" type="camera">
+        <topic>/camera/image</topic>
+        <update_rate>30</update_rate>
+        <always_on>1</always_on>
+        <visualize>true</visualize>
+        <!-- ROS 측 frame_id 로 들어갑니다 -->
+        <gz_frame_id>camera_link</gz_frame_id>
+
+        <camera>
+          <!-- 약 60도 수평 시야 -->
+          <horizontal_fov>1.0472</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.05</near>
+            <far>50.0</far>
+          </clip>
+          <!-- (선택) 화질 노이즈가 필요하면 여기에 noise 블록 추가 가능 -->
+        </camera>
+      </sensor>
+    </gazebo>
+
+
+
+
+
+
+  </xacro:macro>
+</robot>
+

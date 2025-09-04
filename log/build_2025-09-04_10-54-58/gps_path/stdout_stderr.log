@@ -1,0 +1,27 @@
+running develop
+running egg_info
+creating gps_path.egg-info
+writing gps_path.egg-info/PKG-INFO
+writing dependency_links to gps_path.egg-info/dependency_links.txt
+writing entry points to gps_path.egg-info/entry_points.txt
+writing requirements to gps_path.egg-info/requires.txt
+writing top-level names to gps_path.egg-info/top_level.txt
+writing manifest file 'gps_path.egg-info/SOURCES.txt'
+reading manifest file 'gps_path.egg-info/SOURCES.txt'
+writing manifest file 'gps_path.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/euntaek/ws_mobile/install/gps_path/lib/python3.10/site-packages/gps-path.egg-link (link to .)
+Installing gps_centerline_node script to /home/euntaek/ws_mobile/install/gps_path/lib/gps_path
+
+Installed /home/euntaek/ws_mobile/build/gps_path
+running symlink_data
+creating /home/euntaek/ws_mobile/install/gps_path/share/ament_index
+creating /home/euntaek/ws_mobile/install/gps_path/share/ament_index/resource_index
+creating /home/euntaek/ws_mobile/install/gps_path/share/ament_index/resource_index/packages
+symbolically linking /home/euntaek/ws_mobile/build/gps_path/resource/gps_path -> /home/euntaek/ws_mobile/install/gps_path/share/ament_index/resource_index/packages
+symbolically linking /home/euntaek/ws_mobile/build/gps_path/package.xml -> /home/euntaek/ws_mobile/install/gps_path/share/gps_path
+creating /home/euntaek/ws_mobile/install/gps_path/share/gps_path/launch
+symbolically linking /home/euntaek/ws_mobile/build/gps_path/launch/gps_centerline.launch.py -> /home/euntaek/ws_mobile/install/gps_path/share/gps_path/launch
+creating /home/euntaek/ws_mobile/install/gps_path/share/gps_path/data
+symbolically linking /home/euntaek/ws_mobile/build/gps_path/data/left_lane.csv -> /home/euntaek/ws_mobile/install/gps_path/share/gps_path/data
+symbolically linking /home/euntaek/ws_mobile/build/gps_path/data/right_lane.csv -> /home/euntaek/ws_mobile/install/gps_path/share/gps_path/data

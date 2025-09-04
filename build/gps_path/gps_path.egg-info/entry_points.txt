@@ -1,0 +1,3 @@
+[console_scripts]
+gps_centerline_node = gps_path.gps_centerline_node:main
+

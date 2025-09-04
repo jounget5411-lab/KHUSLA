@@ -1,0 +1,17 @@
+/home/euntaek/ws_mobile/install/my_robot_description/share/ament_index/resource_index/package_run_dependencies/my_robot_description
+/home/euntaek/ws_mobile/install/my_robot_description/share/ament_index/resource_index/parent_prefix_path/my_robot_description
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.sh
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.dsv
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/environment/path.sh
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/environment/path.dsv
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/local_setup.bash
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/local_setup.sh
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/local_setup.zsh
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/local_setup.dsv
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.dsv
+/home/euntaek/ws_mobile/install/my_robot_description/share/ament_index/resource_index/packages/my_robot_description
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig.cmake
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig-version.cmake
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.xml
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/launch/display.launch.py
+/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/urdf/my_car.urdf
