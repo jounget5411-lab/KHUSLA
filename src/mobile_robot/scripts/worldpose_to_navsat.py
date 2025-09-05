@@ -17,7 +17,7 @@ class WorldPoseToNavSat(Node):
         self.declare_parameter('lat0_deg', 37.2889339)
         self.declare_parameter('lon0_deg', 127.1076245)
         self.declare_parameter('alt0_m', 114.193)
-        self.declare_parameter('heading_deg', 0)  # <spherical_coordinates><heading_deg>
+        self.declare_parameter('heading_deg', 0.0)  # <spherical_coordinates><heading_deg>
         self.declare_parameter('frame_id', 'gps_link')
         self.lat0 = float(self.get_parameter('lat0_deg').value)
         self.lon0 = float(self.get_parameter('lon0_deg').value)

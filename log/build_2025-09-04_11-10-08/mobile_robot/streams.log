@@ -1,0 +1,51 @@
+[0.006s] Invoking command in '/home/euntaek/ws_mobile/build/mobile_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake /home/euntaek/ws_mobile/src/mobile_robot -DCMAKE_INSTALL_PREFIX=/home/euntaek/ws_mobile/install/mobile_robot
+[0.014s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.085s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.089s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.130s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.130s] -- Added test 'lint_cmake' to check CMake code style
+[0.130s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.131s] -- Added test 'xmllint' to check XML markup files
+[0.132s] -- Configuring done
+[0.133s] -- Generating done
+[0.134s] -- Build files have been written to: /home/euntaek/ws_mobile/build/mobile_robot
+[0.137s] Invoked command in '/home/euntaek/ws_mobile/build/mobile_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake /home/euntaek/ws_mobile/src/mobile_robot -DCMAKE_INSTALL_PREFIX=/home/euntaek/ws_mobile/install/mobile_robot
+[0.138s] Invoking command in '/home/euntaek/ws_mobile/build/mobile_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/euntaek/ws_mobile/build/mobile_robot -- -j24 -l24
+[0.161s] Invoked command in '/home/euntaek/ws_mobile/build/mobile_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/euntaek/ws_mobile/build/mobile_robot -- -j24 -l24
+[0.166s] Invoking command in '/home/euntaek/ws_mobile/build/mobile_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/euntaek/ws_mobile/build/mobile_robot
+[0.170s] -- Install configuration: ""
+[0.171s] -- Execute custom install script
+[0.171s] -- Symlinking: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/launch/__pycache__/gazebo_model.launch.cpython-310.pyc
+[0.176s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/launch/gazebo_model.launch.py
+[0.176s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/model/robot.gazebo
+[0.176s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/model/robot.xacro
+[0.176s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/parameters/bridge_parameters.yaml
+[0.176s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/worlds/lane_markers.sdf
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/worlds/my_world.sdf
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/scripts/odom_to_navsat.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/scripts/posev_to_model_pose.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/scripts/steering_pot_emulator.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/scripts/twist_to_ackermann_fixed.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/scripts/vehicle_interface.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/scripts/worldpose_to_navsat.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/lib/mobile_robot/vehicle_interface.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/lib/mobile_robot/steering_pot_emulator.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/lib/mobile_robot/twist_to_ackermann_fixed.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/lib/mobile_robot/posev_to_model_pose.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/lib/mobile_robot/worldpose_to_navsat.py
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/ament_index/resource_index/package_run_dependencies/mobile_robot
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/ament_index/resource_index/parent_prefix_path/mobile_robot
+[0.177s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/environment/ament_prefix_path.sh
+[0.178s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/environment/ament_prefix_path.dsv
+[0.178s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/environment/path.sh
+[0.178s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/environment/path.dsv
+[0.178s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/local_setup.bash
+[0.178s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/local_setup.sh
+[0.178s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/local_setup.zsh
+[0.178s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/local_setup.dsv
+[0.178s] -- Symlinking: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.dsv
+[0.184s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/ament_index/resource_index/packages/mobile_robot
+[0.184s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/cmake/mobile_robotConfig.cmake
+[0.184s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/cmake/mobile_robotConfig-version.cmake
+[0.184s] -- Up-to-date symlink: /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.xml
+[0.186s] Invoked command in '/home/euntaek/ws_mobile/build/mobile_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/euntaek/ws_mobile/build/mobile_robot

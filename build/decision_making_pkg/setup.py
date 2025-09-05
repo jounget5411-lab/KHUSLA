@@ -1,1 +1,0 @@
-/home/euntaek/ws_mobile/src/decision_making_pkg/setup.py
