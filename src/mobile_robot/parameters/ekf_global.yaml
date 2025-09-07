@@ -1,0 +1,30 @@
+ekf_global:
+  ros__parameters:
+    use_sim_time: true
+    frequency: 30.0
+    two_d_mode: true
+
+    base_link_frame: base_footprint
+    odom_frame: odom
+    map_frame: map
+    world_frame: map          # ✅ 글로벌 EKF는 map 기준
+
+    # 로컬 EKF 결과 (부드러운 모션)
+    odom0: /odometry/filtered
+    odom0_config: [true,  true,  false,
+                   false, false, false,
+                   false, false, true,
+                   false, false, false,
+                   false, false]
+
+    # GPS ENU (navsat 결과)
+    odom1: /gps/odom
+    odom1_config: [true,  true,  false,
+                   false, false, false,
+                   false, false, false,
+                   false, false, false,
+                   false, false]
+
+    publish_tf: true          # ✅ map→odom 발행
+    publish_acceleration: false
+

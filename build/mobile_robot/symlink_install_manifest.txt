@@ -3,6 +3,7 @@
 /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/model/robot.gazebo
 /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/model/robot.xacro
 /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/parameters/bridge_parameters.yaml
+/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/parameters/ekf_global.yaml
 /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/parameters/ekf_local.yaml
 /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/parameters/frames_2025-09-05_16.20.59.gv
 /home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/parameters/frames_2025-09-05_16.20.59.pdf

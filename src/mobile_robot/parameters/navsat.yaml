@@ -1,23 +1,22 @@
-navsat_transform:
+navsat_transform_node:
   ros__parameters:
+    use_sim_time: true
     frequency: 30.0
     delay: 0.0
 
-    # 프레임 지정
-    base_link_frame: base_footprint
+    map_frame: map
     odom_frame: odom
-    world_frame: odom
+    base_link_frame: base_footprint
+    world_frame: map          # ✅ navsat는 map 기준 ENU 생성
 
-    # 동작 옵션
     use_odometry_yaw: true
     two_d_mode: true
     zero_altitude: true
-
+    wait_for_datum: false
     publish_filtered_gps: true
     publish_heading: false
-    wait_for_datum: false
+    # navsat는 TF 발행 불필요
+    # publish_tf: false  # (파라미터가 있어도 기본 false로 두면 됨)
 
     magnetic_declination_radians: 0.0
     yaw_offset: 0.0
-
-    use_sim_time: true

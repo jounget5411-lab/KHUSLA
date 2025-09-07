@@ -4,33 +4,29 @@ ekf_local:
     frequency: 30.0
     two_d_mode: true
 
-    # 프레임 (너의 로봇 트리와 일치시키기)
     base_link_frame: base_footprint
     odom_frame: odom
-    world_frame: odom          # 로컬 EKF는 world=odom 유지
+    world_frame: odom        # ✅ 로컬 EKF는 반드시 odom
 
-    # ====== 센서 입력 설정 ======
-    # IMU (자세 + 각속도 사용)
+    # IMU
     imu0: /imu/with_cov
-    imu0_config: [false, false, false,   # x y z (position)
-                  true,  true,  true,    # roll pitch yaw (orientation)
-                  false, false, false,   # vx vy vz (linear vel)
-                  true,  true,  true,    # wx wy wz (angular vel)
-                  false, false, false]   # ax ay az (linear acc)
+    imu0_config: [false, false, false,
+                  true,  true,  true,
+                  false, false, false,
+                  true,  true,  true,
+                  false, false, false]
     imu0_differential: false
     imu0_remove_gravitational_acceleration: true
 
-    # Gazebo Odometry (있으면 사용)
+    # Gazebo wheel odom
     odom0: /odom
-    odom0_config: [true,  true,  false,  # x y z
-                   false, false, false,  # orientation (IMU에서 받음)
-                   true,  true,  false,  # vx vy vz
-                   false, false, false,  # wx wy wz
+    odom0_config: [true,  true,  false,
+                   false, false, false,
+                   true,  true,  false,
+                   false, false, false,
                    false, false, false]
     odom0_differential: false
 
-    # ====== 잡음(대략치, 나중에 튜닝) ======
-    # 상태: x y z roll pitch yaw vx vy vz wx wy wz ax ay az
     process_noise_covariance_diagonal:
       [0.05, 0.05, 1.0,
        0.01, 0.01, 0.01,
@@ -38,7 +34,5 @@ ekf_local:
        0.1,  0.1,  0.2,
        0.5,  0.5,  1.0]
 
-    # 출력
-    publish_tf: true
+    publish_tf: true          # ✅ odom→base_footprint
     publish_acceleration: false
-

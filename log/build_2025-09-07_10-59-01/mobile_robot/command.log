@@ -1,2 +1,0 @@
-Invoking command in '/home/euntaek/ws_mobile/build/mobile_robot': /usr/bin/cmake --build /home/euntaek/ws_mobile/build/mobile_robot -- -j24 -l24
-Invoked command in '/home/euntaek/ws_mobile/build/mobile_robot' returned '2': /usr/bin/cmake --build /home/euntaek/ws_mobile/build/mobile_robot -- -j24 -l24

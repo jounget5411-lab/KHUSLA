@@ -3,23 +3,28 @@
 <package format="3">
   <name>decision_making_pkg</name>
   <version>0.0.0</version>
-  <description>Decision-Making Package for autonomous vehicle project</description>
-  <maintainer email="your_email@email.com">your_name</maintainer>
-  <license>TODO: License declaration</license>
+  <description>Decision-Making Package for "H-mobility Class 자율주행 심화과정"</description>
+  <maintainer email="whaihong@g.skku.edu">Hyeong-Keun Hong</maintainer>
+  <license>GPL-3</license>
 
   <buildtool_depend>ament_python</buildtool_depend>
 
-  <exec_depend>rclpy</exec_depend>
-  <exec_depend>nav_msgs</exec_depend>
-  <exec_depend>sensor_msgs</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
-  <exec_depend>interfaces_pkg</exec_depend>
-  <exec_depend>rosidl_runtime_py</exec_depend>
-  
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
 
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>interfaces_pkg</exec_depend>
+  <exec_depend>tf_transformations</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-pyproj</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+
+  
   <export>
     <build_type>ament_python</build_type>
   </export>

@@ -23,10 +23,10 @@ def generate_launch_description():
     spawn_z = LaunchConfiguration('spawn_z')
     spawn_Y = LaunchConfiguration('spawn_Y')  # yaw [rad]
 
-    declare_spawn_x = DeclareLaunchArgument('spawn_x', default_value='-3.68')   # 계산치
-    declare_spawn_y = DeclareLaunchArgument('spawn_y', default_value='2.897')   # 계산치
+    declare_spawn_x = DeclareLaunchArgument('spawn_x', default_value='-3.68')
+    declare_spawn_y = DeclareLaunchArgument('spawn_y', default_value='2.897')
     declare_spawn_z = DeclareLaunchArgument('spawn_z', default_value='0.0')
-    declare_spawn_Y = DeclareLaunchArgument('spawn_Y', default_value='2.8')     # 라디안
+    declare_spawn_Y = DeclareLaunchArgument('spawn_Y', default_value='2.8')
 
     # --- Xacro → URDF ---
     xacro_path = os.path.join(pkg_mobile_robot, 'model', 'robot.xacro')
@@ -35,7 +35,7 @@ def generate_launch_description():
     # --- 월드 파일 ---
     world_path = os.path.join(pkg_mobile_robot, 'worlds', 'my_world.sdf')
 
-    # --- 리소스 경로 노출(안정화) ---
+    # --- 리소스 경로 노출 ---
     set_ign_res = SetEnvironmentVariable(
         'IGN_GAZEBO_RESOURCE_PATH',
         f'{pkg_mobile_robot}:' + os.environ.get('IGN_GAZEBO_RESOURCE_PATH', '')
@@ -53,7 +53,7 @@ def generate_launch_description():
         launch_arguments={'gz_args': f'-r {world_path}'}.items(),
     )
 
-    # --- 로봇 스폰 (월드/포즈 명시) ---
+    # --- 로봇 스폰 ---
     spawn = Node(
         package='ros_gz_sim',
         executable='create',
@@ -64,7 +64,7 @@ def generate_launch_description():
             '-x',      spawn_x,
             '-y',      spawn_y,
             '-z',      spawn_z,
-            '-Y',      spawn_Y,      # yaw[rad]
+            '-Y',      spawn_Y,
             '-allow_renaming', 'false',
         ],
         output='screen',
@@ -125,9 +125,9 @@ def generate_launch_description():
         parameters=[
             {'in_topic': '/imu'},
             {'out_topic': '/imu/with_cov'},
-            {'ori_var':  9.0e-4},  # (0.03 rad)^2
-            {'gyro_var': 4.0e-4},  # (0.02 rad/s)^2
-            {'acc_var':  2.5e-3},  # (0.05 m/s^2)^2
+            {'ori_var':  9.0e-4},
+            {'gyro_var': 4.0e-4},
+            {'acc_var':  2.5e-3},
             {'use_sim_time': True},
         ],
     )
@@ -135,40 +135,41 @@ def generate_launch_description():
     # =========================
     # EKF + NavSat Transform
     # =========================
-    ekf_yaml    = os.path.join(pkg_mobile_robot, 'parameters', 'ekf_local.yaml')
-    navsat_yaml = os.path.join(pkg_mobile_robot, 'parameters', 'navsat.yaml')
+    ekf_local_yaml   = os.path.join(pkg_mobile_robot, 'parameters', 'ekf_local.yaml')
+    navsat_yaml      = os.path.join(pkg_mobile_robot, 'parameters', 'navsat.yaml')
+    ekf_global_yaml  = os.path.join(pkg_mobile_robot, 'parameters', 'ekf_global.yaml')  # ✅ 신규
 
     ekf_local = Node(
         package='robot_localization',
         executable='ekf_node',
-        name='ekf_local',
+        name='ekf_local',                           # ✅ YAML top-key와 일치
         output='screen',
-        parameters=[ekf_yaml, {'use_sim_time': True}],
-        # YAML에서 imu0가 이미 /imu/with_cov라면 아래 remap은 생략 가능
-        # remappings=[('/imu', '/imu/with_cov')],
+        parameters=[ekf_local_yaml, {'use_sim_time': True}],
     )
 
     navsat = Node(
         package='robot_localization',
         executable='navsat_transform_node',
-        name='navsat_transform',
+        name='navsat_transform',                    # ✅ YAML top-key와 일치시키기
         output='screen',
         remappings=[
-            # IMU는 /imu 또는 /imu/data 어느쪽을 쓰는 빌드인지 케이스가 갈려서 둘 다 매핑
             ('/imu', '/imu/with_cov'),
             ('/imu/data', '/imu/with_cov'),
-
             ('/gps/fix', '/gps/fix'),
             ('/odometry/filtered', '/odometry/filtered'),
-
-            # ★ 충돌 원인 제거: Odometry는 별도 이름으로
-            ('/odometry/gps', '/gps/odom'),   # <- 새 이름
-            # ('/gps/filtered', '/gps/filtered')  # NavSatFix는 디폴트 그대로 사용
+            ('/odometry/gps', '/gps/odom'),        # ✅ navsat 출력 ENU Odom → /gps/odom
         ],
         parameters=[navsat_yaml, {'use_sim_time': True}],
     )
 
-
+    # ✅ 글로벌 EKF 추가: /odometry/filtered_map + TF(map→odom) 발행
+    ekf_global = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_global',                          # ✅ YAML top-key와 일치
+        output='screen',
+        parameters=[ekf_global_yaml, {'use_sim_time': True}],
+    )
 
     # --- 차량 인터페이스 ---
     veh_if = Node(
@@ -197,17 +198,25 @@ def generate_launch_description():
     # --- 판단부 ---
     path_planner_node = Node(
         package='decision_making_pkg',
-        executable='path_planner',
+        executable='path_planner_node',
+        name='path_planner_node',
         output='screen',
-        remappings=[('/ublox_gps_node/fix', '/gps/fix')],
-        parameters=[{'use_sim_time': True}],
+        parameters=[{
+            'use_sim_time': True,
+            'sub_odom_topic': '/odometry/filtered_map',  # ✅ map 기준만 사용
+            'sub_path_topic': '/gps/centerline',
+        }],
     )
+
     motion_planner_node = Node(
         package='decision_making_pkg',
-        executable='motion_planner',
+        executable='motion_planner_node',
+        name='motion_planner_node',
         output='screen',
-        remappings=[('/ublox_gps_node/fix', '/gps/fix')],
-        parameters=[{'use_sim_time': True}],
+        parameters=[{
+            'use_sim_time': True,
+            'sub_odom_topic': '/odometry/filtered_map',  # ✅ 동일
+        }],
     )
 
     return LaunchDescription([
@@ -221,7 +230,8 @@ def generate_launch_description():
         wp2gps,
         imu_cov,
         ekf_local,
-        navsat,               # ← 한 번만! (navsat_after 제거)
+        navsat,
+        ekf_global,              # ✅ 추가
         gps_centerline_node,
         path_planner_node,
         motion_planner_node,

@@ -4,3 +4,6 @@ source;share/gps_path/hook/pythonpath.sh
 source;share/gps_path/hook/ament_prefix_path.ps1
 source;share/gps_path/hook/ament_prefix_path.dsv
 source;share/gps_path/hook/ament_prefix_path.sh
+source;../../build/gps_path/share/gps_path/hook/pythonpath_develop.ps1
+source;../../build/gps_path/share/gps_path/hook/pythonpath_develop.dsv
+source;../../build/gps_path/share/gps_path/hook/pythonpath_develop.sh

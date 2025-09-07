@@ -13,16 +13,15 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='your_name', # 이 부분은 사용자님 정보로 변경하시는 것을 추천합니다.
-    maintainer_email='your_email@email.com', # 이 부분은 사용자님 정보로 변경하시는 것을 추천합니다.
-    description='Path and Motion planning nodes for the autonomous vehicle',
+    maintainer='hhk-laptop',
+    maintainer_email='whaihong@g.skku.edu',
+    description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            # '실행명령어 = 파이썬파일경로:main함수' 형식
-            'path_planner = decision_making_pkg.path_planner_node:main',
-            'motion_planner = decision_making_pkg.motion_planner_node:main',
+            'motion_planner_node = decision_making_pkg.motion_planner_node:main',
+            'path_planner_node = decision_making_pkg.path_planner_node:main',
         ],
     },
 )
