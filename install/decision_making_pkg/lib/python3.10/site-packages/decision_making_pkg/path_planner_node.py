@@ -1,5 +1,7 @@
+#!/usr/bin/env python3
 import math
 import numpy as np
+import pyproj
 
 import rclpy
 from rclpy.node import Node
@@ -11,34 +13,32 @@ from nav_msgs.msg import Path
 from sensor_msgs.msg import NavSatFix
 from interfaces_pkg.msg import PathPlanningResult
 
-import pyproj
+# --------------- Defaults ---------------
+SUB_PATH_TOPIC_NAME = "/gps/centerline"      # gps_centerline_node가 퍼블리시하는 Path (frame: map, 단위 m)
+SUB_GPS_TOPIC_NAME  = "/ublox_gps_node/fix"  # NavSatFix
+PUB_TOPIC_NAME      = "/path_planning_result"
 
-# --------------- Parameters (defaults) ---------------
-SUB_PATH_TOPIC_NAME = "/gps/centerline"     # gps_centerline_node가 퍼블리시하는 Path (frame: map, 단위: m)
-SUB_GPS_TOPIC_NAME  = "/ublox_gps_node/fix"  # u-blox 드라이버가 퍼블리시하는 표준 NavSatFix (deg/m)
-PUB_TOPIC_NAME      = "/path_planning_result" # motion_planner가 구독하는 기존 토픽/메시지 유지
-
-ORIGIN_LAT = 37.28894785  # hardcoded origin (avg of first left/right CSV points)
+# 하드코딩된 투영 기준(경로 CSV 생성 시와 동일해야 함)
+ORIGIN_LAT = 37.28894785
 ORIGIN_LON = 127.10763105
+
 
 class PathPlannerNode(Node):
     def __init__(self):
         super().__init__('path_planner_node')
 
-        # ---- 파라미터 선언 (최소 변경) ----
+        # 파라미터
         self.sub_path_topic = self.declare_parameter('sub_path_topic', SUB_PATH_TOPIC_NAME).value
-        self.sub_gps_topic  = self.declare_parameter('sub_gps_topic', SUB_GPS_TOPIC_NAME).value
-        self.pub_topic      = self.declare_parameter('pub_topic', PUB_TOPIC_NAME).value
+        self.sub_gps_topic  = self.declare_parameter('sub_gps_topic',  SUB_GPS_TOPIC_NAME).value
+        self.pub_topic      = self.declare_parameter('pub_topic',      PUB_TOPIC_NAME).value
 
-        # hardcoded projection origin (must match gps_centerline_node)
         self.origin_lat = ORIGIN_LAT
         self.origin_lon = ORIGIN_LON
 
-        # 앞으로 사용할 경로 길이/간격 제어(선택)
-        self.ahead_len = int(self.declare_parameter('ahead_len', 50).value)   # 앞쪽으로 보낼 점 개수
-        self.stride    = int(self.declare_parameter('downsample_stride', 1).value)  # 다운샘플 간격(1=그대로)
+        self.ahead_len = int(self.declare_parameter('ahead_len', 50).value)
+        self.stride    = int(self.declare_parameter('downsample_stride', 1).value)
 
-        # ---- QoS ----
+        # QoS
         self.qos_profile = QoSProfile(
             reliability=QoSReliabilityPolicy.RELIABLE,
             history=QoSHistoryPolicy.KEEP_LAST,
@@ -46,23 +46,29 @@ class PathPlannerNode(Node):
             depth=10,
         )
 
-        # ---- 퍼블리셔/서브스크라이버 ----
+        # Pub/Sub
         self.publisher = self.create_publisher(PathPlanningResult, self.pub_topic, self.qos_profile)
         self.path_sub  = self.create_subscription(Path,      self.sub_path_topic, self._on_path, self.qos_profile)
         self.gps_sub   = self.create_subscription(NavSatFix, self.sub_gps_topic,  self._on_fix,  self.qos_profile)
 
-        # ---- 내부 상태 ----
-        self._last_path = None     # nav_msgs/Path
+        # 상태
+        self._last_path = None
         self._have_fix  = False
         self._fix_lat   = None
         self._fix_lon   = None
 
-        # 투영기 준비(가능하면 pyproj 사용)
+        # 투영기
         self._proj = self._make_proj(self.origin_lat, self.origin_lon)
 
+        # 차량 yaw 추정(LLA 연속 2점 기반)
+        self._prev_xy   = None
+        self._veh_yaw   = None   # [rad] map 프레임 기준
+        self._yaw_alpha = 0.3    # 저역통과 게인(0~1)
+
         self.get_logger().info(
-            f"path_planner_node ready (HARD-CODED ORIGIN): sub_path='{self.sub_path_topic}', sub_gps='{self.sub_gps_topic}', "
-            f"pub='{self.pub_topic}', origin=({self.origin_lat}, {self.origin_lon}), ahead_len={self.ahead_len}, stride={self.stride}, proj=AEQD(pyproj-only)"
+            f"path_planner_node ready: sub_path='{self.sub_path_topic}', sub_gps='{self.sub_gps_topic}', "
+            f"pub='{self.pub_topic}', origin=({self.origin_lat}, {self.origin_lon}), "
+            f"ahead_len={self.ahead_len}, stride={self.stride}, proj=AEQD"
         )
 
     # ---------------- Callbacks ----------------
@@ -74,33 +80,49 @@ class PathPlannerNode(Node):
         self._try_publish()
 
     def _on_fix(self, msg: NavSatFix):
+        # 무효 GPS는 무시
         if msg.status.status < 0:
-            # 무효한 GPS 상태면 사용하지 않음
             self._have_fix = False
             return
+
         self._fix_lat = float(msg.latitude)
         self._fix_lon = float(msg.longitude)
         self._have_fix = True
+
+        # 차량 yaw 추정(gps 2점)
+        x_now, y_now = self._latlon_to_xy(self._fix_lat, self._fix_lon)
+        if self._prev_xy is not None:
+            dx = x_now - self._prev_xy[0]
+            dy = y_now - self._prev_xy[1]
+            if abs(dx) + abs(dy) > 1e-3:
+                yaw_new = math.atan2(dy, dx)  # map 프레임(+x,+y) 기준
+                if self._veh_yaw is None:
+                    self._veh_yaw = yaw_new
+                else:
+                    dyaw = self._wrap_pi(yaw_new - self._veh_yaw)
+                    self._veh_yaw = self._wrap_pi(self._veh_yaw + self._yaw_alpha * dyaw)
+        self._prev_xy = (x_now, y_now)
+
         self._try_publish()
 
-    # --------------- Core logic ---------------
+    # --------------- Core ---------------
     def _try_publish(self):
         if (self._last_path is None) or (not self._have_fix):
             return
 
-        # 1) 현재 위치(LLA) -> map 프레임 (m)
+        # 1) 현재 위치 map 좌표
         x0, y0 = self._latlon_to_xy(self._fix_lat, self._fix_lon)
 
-        # 2) Path를 배열로 추출
+        # 2) Path 배열화
         xs, ys = self._path_to_arrays(self._last_path)
         if xs.size < 2:
             self.get_logger().warn("Path has <2 points; skip")
             return
 
-        # 3) 현재 위치에 가장 가까운 점 찾기
+        # 3) 최근접 인덱스
         idx = self._nearest_index(xs, ys, x0, y0)
 
-        # 4) 앞 구간 선택 + 다운샘플
+        # 4) 앞 구간 선택(+다운샘플)
         start = idx
         end   = min(len(xs), start + max(2, self.ahead_len * max(1, self.stride)))
         xs_seg = xs[start:end:self.stride]
@@ -109,48 +131,47 @@ class PathPlannerNode(Node):
             self.get_logger().warn("Too few forward points after slicing; skip")
             return
 
-        # 5) 로컬(차량 유사) 좌표로 변환
-        #    - 원점: 현재 위치(x0, y0)
-        #    - +y가 경로 진행방향이 되도록 회전(차량 헤딩이 없어도 경로 접선 사용)
-        #    경로 접선 각도
-        j = min(start + 5, len(xs) - 1)
-        theta = math.atan2(ys[j] - ys[start], xs[j] - xs[start])  # w.r.t +x
-        # 경로 진행방향이 +y가 되도록 회전각(alpha) = pi/2 - theta
-        alpha = (math.pi / 2.0) - theta
-        ca = math.cos(alpha)
-        sa = math.sin(alpha)
+        # 5) map→vehicle(전방=+y, 우측=+x) 회전
+        if self._veh_yaw is not None:
+            yaw_used = self._veh_yaw   # 차량 진행방향
+            yaw_src = "veh"
+        else:
+            # 초기 fallback: 경로 접선
+            j = min(start + 5, len(xs) - 1)
+            yaw_used = math.atan2(ys[j] - ys[start], xs[j] - xs[start])
+            yaw_src = "path"
+
+        # vehicle 프레임으로의 회전각: alpha = (pi/2) - yaw
+        alpha = (math.pi / 2.0) - yaw_used
+        ca, sa = math.cos(alpha), math.sin(alpha)
 
         dx = xs_seg - x0
         dy = ys_seg - y0
-        x_local = ca * dx - sa * dy
-        y_local = sa * dx + ca * dy
+        x_local = ca * dx - sa * dy  # 차량 우측 +
+        y_local = sa * dx + ca * dy  # 차량 전방 +
 
-        # y가 증가하는 방향으로 정렬 보장(혹시 역방향이면 뒤집기)
+        # 전방 증가 정렬 보장
         if y_local[-1] < y_local[0]:
             x_local = x_local[::-1]
             y_local = y_local[::-1]
 
-        # 6) motion_planner가 기대하는 형식으로 퍼블리시 (x=오른쪽, y=전방)
+        # 6) 퍼블리시
         out = PathPlanningResult()
         out.x_points = [float(v) for v in x_local]
         out.y_points = [float(v) for v in y_local]
         self.publisher.publish(out)
 
         self.get_logger().info(
-            f"Published PathPlanningResult: {len(out.x_points)} pts (nearest_idx={idx}, alpha={alpha:.3f} rad)"
+            f"[{yaw_src}] Published PathPlanningResult: {len(out.x_points)} pts "
+            f"(nearest_idx={idx}, alpha={self._wrap_pi(alpha):.3f} rad, veh_yaw={math.degrees(yaw_used):.1f}°)"
         )
 
-    # --------------- Utilities ---------------
+    # --------------- Utils ---------------
     def _make_proj(self, lat0: float, lon0: float):
-        try:
-            return pyproj.Proj(proj='aeqd', lat_0=lat0, lon_0=lon0, datum='WGS84', units='m')
-        except Exception as e:
-            # pyproj가 필수이므로 실패 시 즉시 중단
-            raise RuntimeError(f"pyproj.Proj init failed: {e}")
+        return pyproj.Proj(proj='aeqd', lat_0=lat0, lon_0=lon0, datum='WGS84', units='m')
 
     def _latlon_to_xy(self, lat_deg: float, lon_deg: float):
-        # pyproj만 사용 (필수)
-        x, y = self._proj(lon_deg, lat_deg)  # (lon, lat) 순서 주의
+        x, y = self._proj(lon_deg, lat_deg)  # (lon, lat) 순서
         return float(x), float(y)
 
     @staticmethod
@@ -166,6 +187,10 @@ class PathPlannerNode(Node):
         d2 = dx*dx + dy*dy
         return int(np.argmin(d2))
 
+    @staticmethod
+    def _wrap_pi(a: float) -> float:
+        return math.atan2(math.sin(a), math.cos(a))
+
 
 def main(args=None):
     rclpy.init(args=args)
@@ -173,7 +198,7 @@ def main(args=None):
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
-        print("\n\nshutdown\n\n")
+        pass
     finally:
         node.destroy_node()
         rclpy.shutdown()

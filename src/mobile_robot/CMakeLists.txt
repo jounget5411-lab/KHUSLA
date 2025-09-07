@@ -37,6 +37,7 @@ install(
     scripts/twist_to_ackermann_fixed.py
     scripts/posev_to_model_pose.py      # 이 줄 추가
     scripts/worldpose_to_navsat.py    # 이 줄 추가
+    scripts/imu_cov_injector.py        # ★ 추가
   DESTINATION lib/${PROJECT_NAME}
 )
 

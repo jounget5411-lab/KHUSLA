@@ -1,0 +1,721 @@
+[0.054s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.054s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=24, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f07ce233e80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f07ce1f1360>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f07ce1f1360>>, mixin_verb=('build',))
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.142s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/euntaek/ws_mobile'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extension 'ros'
+[0.154s] DEBUG:colcon.colcon_core.package_identification:Package 'src/camera_perception_pkg' with type 'ros.ament_python' and name 'camera_perception_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ros'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['cmake', 'python']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'cmake'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'python'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['python_setup_py']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'python_setup_py'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extension 'ros'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extensions ['cmake', 'python']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extension 'cmake'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extension 'python'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extensions ['python_setup_py']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/check_variable_resistor) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extensions ['python_setup_py']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/driving) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extensions ['python_setup_py']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/motor_test) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extensions ['python_setup_py']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/control/ultrasonic) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extensions ['python_setup_py']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collection) by extension 'python_setup_py'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extension 'ros'
+[0.156s] DEBUG:colcon.colcon_core.package_identification:Package 'src/debug_pkg' with type 'ros.ament_python' and name 'debug_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extension 'ros'
+[0.156s] DEBUG:colcon.colcon_core.package_identification:Package 'src/decision_making_pkg' with type 'ros.ament_python' and name 'decision_making_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_path) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_path) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_path) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_path) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_path) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_path) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_path) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_path) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_path) by extension 'ros'
+[0.157s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gps_path' with type 'ros.ament_python' and name 'gps_path'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extension 'ros'
+[0.157s] DEBUG:colcon.colcon_core.package_identification:Package 'src/interfaces_pkg' with type 'ros.ament_cmake' and name 'interfaces_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extension 'ros'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lidar_perception_pkg' with type 'ros.ament_python' and name 'lidar_perception_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/mobile_robot) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/mobile_robot) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/mobile_robot) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/mobile_robot) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/mobile_robot) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/mobile_robot) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/mobile_robot) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/mobile_robot) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/mobile_robot) by extension 'ros'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mobile_robot' with type 'ros.ament_cmake' and name 'mobile_robot'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_robot_description' with type 'ros.ament_cmake' and name 'my_robot_description'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_communication_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_communication_pkg) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_communication_pkg) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_communication_pkg) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_communication_pkg) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_communication_pkg) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_communication_pkg) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_communication_pkg) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_communication_pkg) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial_communication_pkg' with type 'ros.ament_python' and name 'serial_communication_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_test_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_test_pkg) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_test_pkg) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_test_pkg) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_test_pkg) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_test_pkg) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_test_pkg) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_test_pkg) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_test_pkg) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'src/urdf_test_pkg' with type 'ros.ament_cmake' and name 'urdf_test_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.160s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.160s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.160s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.160s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.170s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.170s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.171s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 10 installed packages in /home/euntaek/ws_mobile/install
+[0.172s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 296 installed packages in /opt/ros/humble
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_target' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.192s] DEBUG:colcon.colcon_core.verb:Building package 'camera_perception_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/euntaek/ws_mobile/build/camera_perception_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/euntaek/ws_mobile/install/camera_perception_pkg', 'merge_install': False, 'path': '/home/euntaek/ws_mobile/src/camera_perception_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_target' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.192s] DEBUG:colcon.colcon_core.verb:Building package 'debug_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/euntaek/ws_mobile/build/debug_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/euntaek/ws_mobile/install/debug_pkg', 'merge_install': False, 'path': '/home/euntaek/ws_mobile/src/debug_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'gps_path' build argument 'cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'gps_path' build argument 'cmake_target' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'gps_path' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'gps_path' build argument 'cmake_clean_cache' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'gps_path' build argument 'cmake_clean_first' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'gps_path' build argument 'cmake_force_configure' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'gps_path' build argument 'ament_cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'gps_path' build argument 'catkin_cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'gps_path' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.192s] DEBUG:colcon.colcon_core.verb:Building package 'gps_path' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/euntaek/ws_mobile/build/gps_path', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/euntaek/ws_mobile/install/gps_path', 'merge_install': False, 'path': '/home/euntaek/ws_mobile/src/gps_path', 'symlink_install': False, 'test_result_base': None}
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.193s] DEBUG:colcon.colcon_core.verb:Building package 'interfaces_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/euntaek/ws_mobile/build/interfaces_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/euntaek/ws_mobile/install/interfaces_pkg', 'merge_install': False, 'path': '/home/euntaek/ws_mobile/src/interfaces_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.193s] DEBUG:colcon.colcon_core.verb:Building package 'lidar_perception_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/euntaek/ws_mobile/build/lidar_perception_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/euntaek/ws_mobile/install/lidar_perception_pkg', 'merge_install': False, 'path': '/home/euntaek/ws_mobile/src/lidar_perception_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'mobile_robot' build argument 'cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'mobile_robot' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'mobile_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'mobile_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'mobile_robot' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'mobile_robot' build argument 'cmake_force_configure' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'mobile_robot' build argument 'ament_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'mobile_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'mobile_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.193s] DEBUG:colcon.colcon_core.verb:Building package 'mobile_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/euntaek/ws_mobile/build/mobile_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/euntaek/ws_mobile/install/mobile_robot', 'merge_install': False, 'path': '/home/euntaek/ws_mobile/src/mobile_robot', 'symlink_install': False, 'test_result_base': None}
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.193s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/euntaek/ws_mobile/build/my_robot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/euntaek/ws_mobile/install/my_robot_description', 'merge_install': False, 'path': '/home/euntaek/ws_mobile/src/my_robot_description', 'symlink_install': False, 'test_result_base': None}
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'serial_communication_pkg' build argument 'cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'serial_communication_pkg' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'serial_communication_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'serial_communication_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'serial_communication_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'serial_communication_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'serial_communication_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'serial_communication_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'serial_communication_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.194s] DEBUG:colcon.colcon_core.verb:Building package 'serial_communication_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/euntaek/ws_mobile/build/serial_communication_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/euntaek/ws_mobile/install/serial_communication_pkg', 'merge_install': False, 'path': '/home/euntaek/ws_mobile/src/serial_communication_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'urdf_test_pkg' build argument 'cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'urdf_test_pkg' build argument 'cmake_target' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'urdf_test_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'urdf_test_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'urdf_test_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'urdf_test_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'urdf_test_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'urdf_test_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'urdf_test_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.194s] DEBUG:colcon.colcon_core.verb:Building package 'urdf_test_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/euntaek/ws_mobile/build/urdf_test_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/euntaek/ws_mobile/install/urdf_test_pkg', 'merge_install': False, 'path': '/home/euntaek/ws_mobile/src/urdf_test_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_target' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.194s] DEBUG:colcon.colcon_core.verb:Building package 'decision_making_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/euntaek/ws_mobile/build/decision_making_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/euntaek/ws_mobile/install/decision_making_pkg', 'merge_install': False, 'path': '/home/euntaek/ws_mobile/src/decision_making_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.194s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.195s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.195s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/euntaek/ws_mobile/src/interfaces_pkg' with build type 'ament_cmake'
+[0.195s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/euntaek/ws_mobile/src/interfaces_pkg'
+[0.196s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.196s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.196s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.198s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/euntaek/ws_mobile/src/camera_perception_pkg' with build type 'ament_python'
+[0.198s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_perception_pkg', 'ament_prefix_path')
+[0.199s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/hook/ament_prefix_path.ps1'
+[0.199s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/hook/ament_prefix_path.dsv'
+[0.199s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/hook/ament_prefix_path.sh'
+[0.199s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.200s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.201s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/euntaek/ws_mobile/src/debug_pkg' with build type 'ament_python'
+[0.201s] Level 1:colcon.colcon_core.shell:create_environment_hook('debug_pkg', 'ament_prefix_path')
+[0.201s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/hook/ament_prefix_path.ps1'
+[0.202s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/hook/ament_prefix_path.dsv'
+[0.202s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/hook/ament_prefix_path.sh'
+[0.202s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.202s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.204s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/euntaek/ws_mobile/src/gps_path' with build type 'ament_python'
+[0.204s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_path', 'ament_prefix_path')
+[0.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/hook/ament_prefix_path.ps1'
+[0.204s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/hook/ament_prefix_path.dsv'
+[0.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/hook/ament_prefix_path.sh'
+[0.205s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.205s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.207s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/euntaek/ws_mobile/src/lidar_perception_pkg' with build type 'ament_python'
+[0.207s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_perception_pkg', 'ament_prefix_path')
+[0.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/ament_prefix_path.ps1'
+[0.207s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/ament_prefix_path.dsv'
+[0.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/ament_prefix_path.sh'
+[0.208s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.208s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.209s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/euntaek/ws_mobile/src/mobile_robot' with build type 'ament_cmake'
+[0.209s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/euntaek/ws_mobile/src/mobile_robot'
+[0.210s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.210s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.211s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/euntaek/ws_mobile/src/my_robot_description' with build type 'ament_cmake'
+[0.212s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/euntaek/ws_mobile/src/my_robot_description'
+[0.212s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.212s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.213s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/euntaek/ws_mobile/src/serial_communication_pkg' with build type 'ament_python'
+[0.214s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_communication_pkg', 'ament_prefix_path')
+[0.214s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/hook/ament_prefix_path.ps1'
+[0.214s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/hook/ament_prefix_path.dsv'
+[0.214s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/hook/ament_prefix_path.sh'
+[0.214s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.214s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.216s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/euntaek/ws_mobile/src/urdf_test_pkg' with build type 'ament_cmake'
+[0.216s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/euntaek/ws_mobile/src/urdf_test_pkg'
+[0.216s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.216s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.221s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/build/interfaces_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/euntaek/ws_mobile/build/interfaces_pkg -- -j24 -l24
+[0.357s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/euntaek/ws_mobile/src/camera_perception_pkg'
+[0.358s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.358s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.497s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/euntaek/ws_mobile/src/debug_pkg'
+[0.497s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.497s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.628s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/euntaek/ws_mobile/src/gps_path'
+[0.628s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.628s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.763s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/euntaek/ws_mobile/src/lidar_perception_pkg'
+[0.763s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.763s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.767s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/build/mobile_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/euntaek/ws_mobile/build/mobile_robot -- -j24 -l24
+[0.768s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/euntaek/ws_mobile/build/my_robot_description -- -j24 -l24
+[0.899s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/euntaek/ws_mobile/src/serial_communication_pkg'
+[0.900s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.900s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.906s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/build/urdf_test_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/euntaek/ws_mobile/build/urdf_test_pkg -- -j24 -l24
+[0.907s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/build/mobile_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/euntaek/ws_mobile/build/mobile_robot -- -j24 -l24
+[0.913s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/build/mobile_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/euntaek/ws_mobile/build/mobile_robot
+[0.914s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/build/interfaces_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/euntaek/ws_mobile/build/interfaces_pkg -- -j24 -l24
+[0.915s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/build/interfaces_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/euntaek/ws_mobile/build/interfaces_pkg
+[0.915s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/euntaek/ws_mobile/build/my_robot_description -- -j24 -l24
+[0.917s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/euntaek/ws_mobile/build/my_robot_description
+[0.929s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_description)
+[0.932s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/euntaek/ws_mobile/build/my_robot_description
+[0.937s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description' for CMake module files
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description' for CMake config files
+[0.940s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_description', 'cmake_prefix_path')
+[0.941s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.ps1'
+[0.942s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.dsv'
+[0.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.sh'
+[0.944s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description/bin'
+[0.944s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description/lib/pkgconfig/my_robot_description.pc'
+[0.944s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description/lib/python3.10/site-packages'
+[0.944s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description/bin'
+[0.944s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.ps1'
+[0.945s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.dsv'
+[0.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.sh'
+[0.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.bash'
+[0.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.zsh'
+[0.947s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/my_robot_description/share/colcon-core/packages/my_robot_description)
+[0.947s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_description)
+[0.947s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description' for CMake module files
+[0.947s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description' for CMake config files
+[0.948s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_description', 'cmake_prefix_path')
+[0.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.ps1'
+[0.948s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.dsv'
+[0.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.sh'
+[0.948s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description/bin'
+[0.948s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description/lib/pkgconfig/my_robot_description.pc'
+[0.949s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description/lib/python3.10/site-packages'
+[0.949s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/my_robot_description/bin'
+[0.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.ps1'
+[0.949s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.dsv'
+[0.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.sh'
+[0.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.bash'
+[0.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/my_robot_description/share/my_robot_description/package.zsh'
+[0.950s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/my_robot_description/share/colcon-core/packages/my_robot_description)
+[0.951s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/build/urdf_test_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/euntaek/ws_mobile/build/urdf_test_pkg -- -j24 -l24
+[0.952s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mobile_robot)
+[0.952s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/build/urdf_test_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/euntaek/ws_mobile/build/urdf_test_pkg
+[0.953s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot' for CMake module files
+[0.953s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/build/mobile_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/euntaek/ws_mobile/build/mobile_robot
+[0.954s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot' for CMake config files
+[0.955s] Level 1:colcon.colcon_core.shell:create_environment_hook('mobile_robot', 'cmake_prefix_path')
+[0.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/hook/cmake_prefix_path.ps1'
+[0.955s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/hook/cmake_prefix_path.dsv'
+[0.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/hook/cmake_prefix_path.sh'
+[0.956s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot/lib'
+[0.956s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot/bin'
+[0.956s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot/lib/pkgconfig/mobile_robot.pc'
+[0.956s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot/lib/python3.10/site-packages'
+[0.956s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot/bin'
+[0.956s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.ps1'
+[0.957s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.dsv'
+[0.957s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.sh'
+[0.957s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.bash'
+[0.957s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.zsh'
+[0.957s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/mobile_robot/share/colcon-core/packages/mobile_robot)
+[0.958s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mobile_robot)
+[0.958s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot' for CMake module files
+[0.958s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot' for CMake config files
+[0.958s] Level 1:colcon.colcon_core.shell:create_environment_hook('mobile_robot', 'cmake_prefix_path')
+[0.958s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/hook/cmake_prefix_path.ps1'
+[0.959s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/hook/cmake_prefix_path.dsv'
+[0.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/hook/cmake_prefix_path.sh'
+[0.959s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot/lib'
+[0.959s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot/bin'
+[0.959s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot/lib/pkgconfig/mobile_robot.pc'
+[0.959s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot/lib/python3.10/site-packages'
+[0.959s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/mobile_robot/bin'
+[0.959s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.ps1'
+[0.960s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.dsv'
+[0.960s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.sh'
+[0.960s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.bash'
+[0.960s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/mobile_robot/share/mobile_robot/package.zsh'
+[0.960s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/mobile_robot/share/colcon-core/packages/mobile_robot)
+[0.966s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_test_pkg)
+[0.966s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg' for CMake module files
+[0.967s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/build/urdf_test_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/euntaek/ws_mobile/build/urdf_test_pkg
+[0.967s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg' for CMake config files
+[0.967s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_test_pkg', 'cmake_prefix_path')
+[0.967s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/hook/cmake_prefix_path.ps1'
+[0.967s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/hook/cmake_prefix_path.dsv'
+[0.968s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/hook/cmake_prefix_path.sh'
+[0.968s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg/bin'
+[0.968s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg/lib/pkgconfig/urdf_test_pkg.pc'
+[0.968s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg/lib/python3.10/site-packages'
+[0.968s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg/bin'
+[0.968s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.ps1'
+[0.969s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.dsv'
+[0.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.sh'
+[0.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.bash'
+[0.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.zsh'
+[0.969s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/urdf_test_pkg/share/colcon-core/packages/urdf_test_pkg)
+[0.970s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_test_pkg)
+[0.970s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg' for CMake module files
+[0.970s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg' for CMake config files
+[0.970s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_test_pkg', 'cmake_prefix_path')
+[0.970s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/hook/cmake_prefix_path.ps1'
+[0.970s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/hook/cmake_prefix_path.dsv'
+[0.971s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/hook/cmake_prefix_path.sh'
+[0.971s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg/bin'
+[0.971s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg/lib/pkgconfig/urdf_test_pkg.pc'
+[0.971s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg/lib/python3.10/site-packages'
+[0.971s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/urdf_test_pkg/bin'
+[0.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.ps1'
+[0.971s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.dsv'
+[0.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.sh'
+[0.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.bash'
+[0.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/urdf_test_pkg/share/urdf_test_pkg/package.zsh'
+[0.972s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/urdf_test_pkg/share/colcon-core/packages/urdf_test_pkg)
+[0.980s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces_pkg)
+[0.980s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/build/interfaces_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/euntaek/ws_mobile/install/serial_communication_pkg:/home/euntaek/ws_mobile/install/lidar_perception_pkg:/home/euntaek/ws_mobile/install/decision_making_pkg:/home/euntaek/ws_mobile/install/gps_path:/home/euntaek/ws_mobile/install/debug_pkg:/home/euntaek/ws_mobile/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/euntaek/ws_mobile/build/interfaces_pkg
+[0.980s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg' for CMake module files
+[0.981s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg' for CMake config files
+[0.981s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces_pkg', 'cmake_prefix_path')
+[0.981s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.ps1'
+[0.982s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.dsv'
+[0.982s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.sh'
+[0.982s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg/lib'
+[0.982s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces_pkg', 'ld_library_path_lib')
+[0.982s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.ps1'
+[0.983s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.dsv'
+[0.983s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.sh'
+[0.983s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg/bin'
+[0.983s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg/lib/pkgconfig/interfaces_pkg.pc'
+[0.983s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg/lib/python3.10/site-packages'
+[0.983s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg/bin'
+[0.983s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/package.ps1'
+[0.984s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/package.dsv'
+[0.984s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/package.sh'
+[0.984s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/package.bash'
+[0.984s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/package.zsh'
+[0.985s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/interfaces_pkg/share/colcon-core/packages/interfaces_pkg)
+[0.985s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces_pkg)
+[0.985s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg' for CMake module files
+[0.985s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg' for CMake config files
+[0.986s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces_pkg', 'cmake_prefix_path')
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.ps1'
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.dsv'
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.sh'
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg/lib'
+[0.987s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces_pkg', 'ld_library_path_lib')
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.ps1'
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.dsv'
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.sh'
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg/bin'
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg/lib/pkgconfig/interfaces_pkg.pc'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg/lib/python3.10/site-packages'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/interfaces_pkg/bin'
+[0.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/package.ps1'
+[0.988s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/package.dsv'
+[0.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/package.sh'
+[0.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/package.bash'
+[0.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/interfaces_pkg/share/interfaces_pkg/package.zsh'
+[0.989s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/interfaces_pkg/share/colcon-core/packages/interfaces_pkg)
+[0.989s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/euntaek/ws_mobile/src/decision_making_pkg' with build type 'ament_python'
+[0.989s] Level 1:colcon.colcon_core.shell:create_environment_hook('decision_making_pkg', 'ament_prefix_path')
+[0.990s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/hook/ament_prefix_path.ps1'
+[0.990s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/hook/ament_prefix_path.dsv'
+[0.990s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/hook/ament_prefix_path.sh'
+[0.991s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.991s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.139s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/euntaek/ws_mobile/src/decision_making_pkg'
+[1.139s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.139s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.144s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/src/camera_perception_pkg': PYTHONPATH=/home/euntaek/ws_mobile/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/camera_perception_pkg build --build-base /home/euntaek/ws_mobile/build/camera_perception_pkg/build install --record /home/euntaek/ws_mobile/build/camera_perception_pkg/install.log --single-version-externally-managed install_data
+[1.145s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/src/lidar_perception_pkg': PYTHONPATH=/home/euntaek/ws_mobile/build/lidar_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/lidar_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_perception_pkg build --build-base /home/euntaek/ws_mobile/build/lidar_perception_pkg/build install --record /home/euntaek/ws_mobile/build/lidar_perception_pkg/install.log --single-version-externally-managed install_data
+[1.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/src/debug_pkg': PYTHONPATH=/home/euntaek/ws_mobile/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/debug_pkg build --build-base /home/euntaek/ws_mobile/build/debug_pkg/build install --record /home/euntaek/ws_mobile/build/debug_pkg/install.log --single-version-externally-managed install_data
+[1.149s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/src/gps_path': PYTHONPATH=/home/euntaek/ws_mobile/build/gps_path/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/gps_path/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gps_path build --build-base /home/euntaek/ws_mobile/build/gps_path/build install --record /home/euntaek/ws_mobile/build/gps_path/install.log --single-version-externally-managed install_data
+[1.149s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/src/serial_communication_pkg': PYTHONPATH=/home/euntaek/ws_mobile/build/serial_communication_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/serial_communication_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/serial_communication_pkg build --build-base /home/euntaek/ws_mobile/build/serial_communication_pkg/build install --record /home/euntaek/ws_mobile/build/serial_communication_pkg/install.log --single-version-externally-managed install_data
+[1.309s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/gps_path' for CMake module files
+[1.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/src/gps_path' returned '0': PYTHONPATH=/home/euntaek/ws_mobile/build/gps_path/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/gps_path/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gps_path build --build-base /home/euntaek/ws_mobile/build/gps_path/build install --record /home/euntaek/ws_mobile/build/gps_path/install.log --single-version-externally-managed install_data
+[1.310s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/gps_path' for CMake config files
+[1.311s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/gps_path/lib'
+[1.311s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/gps_path/bin'
+[1.311s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/gps_path/lib/pkgconfig/gps_path.pc'
+[1.311s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/gps_path/lib/python3.10/site-packages'
+[1.311s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_path', 'pythonpath')
+[1.311s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/hook/pythonpath.ps1'
+[1.311s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/hook/pythonpath.dsv'
+[1.312s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/hook/pythonpath.sh'
+[1.312s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/gps_path/bin'
+[1.312s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gps_path)
+[1.312s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/package.ps1'
+[1.312s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/package.dsv'
+[1.313s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/package.sh'
+[1.313s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/package.bash'
+[1.313s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/gps_path/share/gps_path/package.zsh'
+[1.313s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/gps_path/share/colcon-core/packages/gps_path)
+[1.314s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/debug_pkg' for CMake module files
+[1.315s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/src/debug_pkg' returned '0': PYTHONPATH=/home/euntaek/ws_mobile/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/debug_pkg build --build-base /home/euntaek/ws_mobile/build/debug_pkg/build install --record /home/euntaek/ws_mobile/build/debug_pkg/install.log --single-version-externally-managed install_data
+[1.315s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/debug_pkg' for CMake config files
+[1.315s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/debug_pkg/lib'
+[1.315s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/debug_pkg/bin'
+[1.315s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/debug_pkg/lib/pkgconfig/debug_pkg.pc'
+[1.316s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages'
+[1.316s] Level 1:colcon.colcon_core.shell:create_environment_hook('debug_pkg', 'pythonpath')
+[1.316s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/hook/pythonpath.ps1'
+[1.316s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/hook/pythonpath.dsv'
+[1.316s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/hook/pythonpath.sh'
+[1.317s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/debug_pkg/bin'
+[1.317s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(debug_pkg)
+[1.317s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/package.ps1'
+[1.317s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/package.dsv'
+[1.317s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/package.sh'
+[1.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/package.bash'
+[1.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg/package.zsh'
+[1.318s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/debug_pkg/share/colcon-core/packages/debug_pkg)
+[1.318s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/lidar_perception_pkg' for CMake module files
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/lidar_perception_pkg' for CMake config files
+[1.319s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/src/lidar_perception_pkg' returned '0': PYTHONPATH=/home/euntaek/ws_mobile/build/lidar_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/lidar_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_perception_pkg build --build-base /home/euntaek/ws_mobile/build/lidar_perception_pkg/build install --record /home/euntaek/ws_mobile/build/lidar_perception_pkg/install.log --single-version-externally-managed install_data
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/lidar_perception_pkg/lib'
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/lidar_perception_pkg/bin'
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/lidar_perception_pkg/lib/pkgconfig/lidar_perception_pkg.pc'
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/lidar_perception_pkg/lib/python3.10/site-packages'
+[1.319s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_perception_pkg', 'pythonpath')
+[1.320s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/pythonpath.ps1'
+[1.320s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/pythonpath.dsv'
+[1.320s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/pythonpath.sh'
+[1.320s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/lidar_perception_pkg/bin'
+[1.320s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar_perception_pkg)
+[1.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/package.ps1'
+[1.321s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/package.dsv'
+[1.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/package.sh'
+[1.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/package.bash'
+[1.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg/package.zsh'
+[1.322s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/lidar_perception_pkg/share/colcon-core/packages/lidar_perception_pkg)
+[1.324s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/serial_communication_pkg' for CMake module files
+[1.325s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/src/serial_communication_pkg' returned '0': PYTHONPATH=/home/euntaek/ws_mobile/build/serial_communication_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/serial_communication_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/serial_communication_pkg build --build-base /home/euntaek/ws_mobile/build/serial_communication_pkg/build install --record /home/euntaek/ws_mobile/build/serial_communication_pkg/install.log --single-version-externally-managed install_data
+[1.325s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/serial_communication_pkg' for CMake config files
+[1.325s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/serial_communication_pkg/lib'
+[1.325s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/serial_communication_pkg/bin'
+[1.325s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/serial_communication_pkg/lib/pkgconfig/serial_communication_pkg.pc'
+[1.325s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/serial_communication_pkg/lib/python3.10/site-packages'
+[1.325s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_communication_pkg', 'pythonpath')
+[1.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/hook/pythonpath.ps1'
+[1.326s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/hook/pythonpath.dsv'
+[1.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/hook/pythonpath.sh'
+[1.326s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/serial_communication_pkg/bin'
+[1.326s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial_communication_pkg)
+[1.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/package.ps1'
+[1.327s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/package.dsv'
+[1.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/package.sh'
+[1.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/package.bash'
+[1.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/serial_communication_pkg/share/serial_communication_pkg/package.zsh'
+[1.328s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/serial_communication_pkg/share/colcon-core/packages/serial_communication_pkg)
+[1.328s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/camera_perception_pkg' for CMake module files
+[1.328s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/src/camera_perception_pkg' returned '0': PYTHONPATH=/home/euntaek/ws_mobile/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/camera_perception_pkg build --build-base /home/euntaek/ws_mobile/build/camera_perception_pkg/build install --record /home/euntaek/ws_mobile/build/camera_perception_pkg/install.log --single-version-externally-managed install_data
+[1.328s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/camera_perception_pkg' for CMake config files
+[1.329s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/camera_perception_pkg/lib'
+[1.329s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/camera_perception_pkg/bin'
+[1.329s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/camera_perception_pkg/lib/pkgconfig/camera_perception_pkg.pc'
+[1.329s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages'
+[1.329s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_perception_pkg', 'pythonpath')
+[1.329s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/hook/pythonpath.ps1'
+[1.329s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/hook/pythonpath.dsv'
+[1.329s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/hook/pythonpath.sh'
+[1.330s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/camera_perception_pkg/bin'
+[1.330s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(camera_perception_pkg)
+[1.330s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/package.ps1'
+[1.330s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/package.dsv'
+[1.330s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/package.sh'
+[1.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/package.bash'
+[1.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg/package.zsh'
+[1.331s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/camera_perception_pkg/share/colcon-core/packages/camera_perception_pkg)
+[1.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/euntaek/ws_mobile/src/decision_making_pkg': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/decision_making_pkg build --build-base /home/euntaek/ws_mobile/build/decision_making_pkg/build install --record /home/euntaek/ws_mobile/build/decision_making_pkg/install.log --single-version-externally-managed install_data
+[1.487s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/decision_making_pkg' for CMake module files
+[1.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/euntaek/ws_mobile/src/decision_making_pkg' returned '0': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/decision_making_pkg build --build-base /home/euntaek/ws_mobile/build/decision_making_pkg/build install --record /home/euntaek/ws_mobile/build/decision_making_pkg/install.log --single-version-externally-managed install_data
+[1.487s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/decision_making_pkg' for CMake config files
+[1.488s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/decision_making_pkg/lib'
+[1.488s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/decision_making_pkg/bin'
+[1.488s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/decision_making_pkg/lib/pkgconfig/decision_making_pkg.pc'
+[1.488s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages'
+[1.488s] Level 1:colcon.colcon_core.shell:create_environment_hook('decision_making_pkg', 'pythonpath')
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/hook/pythonpath.ps1'
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/hook/pythonpath.dsv'
+[1.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/hook/pythonpath.sh'
+[1.489s] Level 1:colcon.colcon_core.environment:checking '/home/euntaek/ws_mobile/install/decision_making_pkg/bin'
+[1.489s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(decision_making_pkg)
+[1.489s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/package.ps1'
+[1.489s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/package.dsv'
+[1.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/package.sh'
+[1.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/package.bash'
+[1.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg/package.zsh'
+[1.490s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/euntaek/ws_mobile/install/decision_making_pkg/share/colcon-core/packages/decision_making_pkg)
+[1.490s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.490s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.490s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.491s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.494s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.494s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.494s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.498s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.498s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/euntaek/ws_mobile/install/local_setup.ps1'
+[1.498s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/euntaek/ws_mobile/install/_local_setup_util_ps1.py'
+[1.499s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/euntaek/ws_mobile/install/setup.ps1'
+[1.500s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/euntaek/ws_mobile/install/local_setup.sh'
+[1.500s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/euntaek/ws_mobile/install/_local_setup_util_sh.py'
+[1.500s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/euntaek/ws_mobile/install/setup.sh'
+[1.501s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/euntaek/ws_mobile/install/local_setup.bash'
+[1.501s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/euntaek/ws_mobile/install/setup.bash'
+[1.502s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/euntaek/ws_mobile/install/local_setup.zsh'
+[1.502s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/euntaek/ws_mobile/install/setup.zsh'

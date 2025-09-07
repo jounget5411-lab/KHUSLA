@@ -313,8 +313,8 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "launch" "model" "parameters" "worlds" "scripts" "DESTINATION" "share/mobile_robot")
 ament_cmake_symlink_install_directory("/home/euntaek/ws_mobile/src/mobile_robot" DIRECTORY "launch" "model" "parameters" "worlds" "scripts" "DESTINATION" "share/mobile_robot")
 
-# install(PROGRAMS "scripts/vehicle_interface.py" "scripts/steering_pot_emulator.py" "scripts/twist_to_ackermann_fixed.py" "scripts/posev_to_model_pose.py" "scripts/worldpose_to_navsat.py" "DESTINATION" "lib/mobile_robot")
-ament_cmake_symlink_install_programs("/home/euntaek/ws_mobile/src/mobile_robot" PROGRAMS "scripts/vehicle_interface.py" "scripts/steering_pot_emulator.py" "scripts/twist_to_ackermann_fixed.py" "scripts/posev_to_model_pose.py" "scripts/worldpose_to_navsat.py" "DESTINATION" "lib/mobile_robot")
+# install(PROGRAMS "scripts/vehicle_interface.py" "scripts/steering_pot_emulator.py" "scripts/twist_to_ackermann_fixed.py" "scripts/posev_to_model_pose.py" "scripts/worldpose_to_navsat.py" "scripts/imu_cov_injector.py" "DESTINATION" "lib/mobile_robot")
+ament_cmake_symlink_install_programs("/home/euntaek/ws_mobile/src/mobile_robot" PROGRAMS "scripts/vehicle_interface.py" "scripts/steering_pot_emulator.py" "scripts/twist_to_ackermann_fixed.py" "scripts/posev_to_model_pose.py" "scripts/worldpose_to_navsat.py" "scripts/imu_cov_injector.py" "DESTINATION" "lib/mobile_robot")
 
 # install(FILES "/home/euntaek/ws_mobile/build/mobile_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mobile_robot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/euntaek/ws_mobile/src/mobile_robot" FILES "/home/euntaek/ws_mobile/build/mobile_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mobile_robot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

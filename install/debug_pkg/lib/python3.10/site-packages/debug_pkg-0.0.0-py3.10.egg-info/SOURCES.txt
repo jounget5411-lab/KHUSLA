@@ -9,8 +9,9 @@ setup.py
 ../../build/debug_pkg/debug_pkg.egg-info/top_level.txt
 ../../build/debug_pkg/debug_pkg.egg-info/zip-safe
 debug_pkg/__init__.py
+debug_pkg/gps_path_visualizer_node.py
 debug_pkg/path_visualizer_node.py
-debug_pkg/yolov8_visualizer_node.py
+debug_pkg/yolo_visualizer_node.py
 debug_pkg/lib/__init__.py
 resource/debug_pkg
 test/test_copyright.py

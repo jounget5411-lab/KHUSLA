@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'path_visualizer_node = debug_pkg.path_visualizer_node:main',	
-            'yolov8_visualizer_node = debug_pkg.yolov8_visualizer_node:main',	
+            'yolo_visualizer_node = debug_pkg.yolo_visualizer_node:main',
+            'gps_path_visualizer_node = debug_pkg.gps_path_visualizer_node:main',	
         ],
     },
 )

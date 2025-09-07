@@ -1,0 +1,22 @@
+[0.342s] Invoking command in '/home/euntaek/ws_mobile/src/decision_making_pkg': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot LD_LIBRARY_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/euntaek/ws_mobile/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/decision_making_pkg build --build-base /home/euntaek/ws_mobile/build/decision_making_pkg/build install --record /home/euntaek/ws_mobile/build/decision_making_pkg/install.log --single-version-externally-managed install_data
+[0.467s] running egg_info
+[0.467s] writing ../../build/decision_making_pkg/decision_making_pkg.egg-info/PKG-INFO
+[0.467s] writing dependency_links to ../../build/decision_making_pkg/decision_making_pkg.egg-info/dependency_links.txt
+[0.467s] writing entry points to ../../build/decision_making_pkg/decision_making_pkg.egg-info/entry_points.txt
+[0.467s] writing requirements to ../../build/decision_making_pkg/decision_making_pkg.egg-info/requires.txt
+[0.467s] writing top-level names to ../../build/decision_making_pkg/decision_making_pkg.egg-info/top_level.txt
+[0.469s] reading manifest file '../../build/decision_making_pkg/decision_making_pkg.egg-info/SOURCES.txt'
+[0.469s] writing manifest file '../../build/decision_making_pkg/decision_making_pkg.egg-info/SOURCES.txt'
+[0.469s] running build
+[0.469s] running build_py
+[0.469s] running install
+[0.469s] running install_lib
+[0.470s] running install_data
+[0.470s] running install_egg_info
+[0.471s] removing '/home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.471s] Copying ../../build/decision_making_pkg/decision_making_pkg.egg-info to /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg-0.0.0-py3.10.egg-info
+[0.472s] running install_scripts
+[0.482s] Installing motion_planner script to /home/euntaek/ws_mobile/install/decision_making_pkg/lib/decision_making_pkg
+[0.482s] Installing path_planner script to /home/euntaek/ws_mobile/install/decision_making_pkg/lib/decision_making_pkg
+[0.483s] writing list of installed files to '/home/euntaek/ws_mobile/build/decision_making_pkg/install.log'
+[0.494s] Invoked command in '/home/euntaek/ws_mobile/src/decision_making_pkg' returned '0': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot LD_LIBRARY_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/euntaek/ws_mobile/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/decision_making_pkg build --build-base /home/euntaek/ws_mobile/build/decision_making_pkg/build install --record /home/euntaek/ws_mobile/build/decision_making_pkg/install.log --single-version-externally-managed install_data

@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/gps_path/gps_path.egg-info/PKG-INFO
+writing dependency_links to ../../build/gps_path/gps_path.egg-info/dependency_links.txt
+writing entry points to ../../build/gps_path/gps_path.egg-info/entry_points.txt
+writing requirements to ../../build/gps_path/gps_path.egg-info/requires.txt
+writing top-level names to ../../build/gps_path/gps_path.egg-info/top_level.txt
+reading manifest file '../../build/gps_path/gps_path.egg-info/SOURCES.txt'
+writing manifest file '../../build/gps_path/gps_path.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/euntaek/ws_mobile/install/gps_path/lib/python3.10/site-packages/gps_path-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/gps_path/gps_path.egg-info to /home/euntaek/ws_mobile/install/gps_path/lib/python3.10/site-packages/gps_path-0.0.1-py3.10.egg-info
+running install_scripts
+Installing gps_centerline_node script to /home/euntaek/ws_mobile/install/gps_path/lib/gps_path
+writing list of installed files to '/home/euntaek/ws_mobile/build/gps_path/install.log'
