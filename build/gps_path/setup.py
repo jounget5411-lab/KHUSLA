@@ -1,1 +1,0 @@
-/home/euntaek/ws_mobile/src/gps_path/setup.py

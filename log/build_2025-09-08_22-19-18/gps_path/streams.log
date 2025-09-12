@@ -1,0 +1,29 @@
+[0.742s] Invoking command in '/home/euntaek/ws_mobile/build/gps_path': PYTHONPATH=/home/euntaek/ws_mobile/build/gps_path/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/gps_path/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/euntaek/ws_mobile/build/gps_path/build --no-deps symlink_data
+[0.883s] running develop
+[0.963s] running egg_info
+[0.963s] creating gps_path.egg-info
+[0.963s] writing gps_path.egg-info/PKG-INFO
+[0.964s] writing dependency_links to gps_path.egg-info/dependency_links.txt
+[0.964s] writing entry points to gps_path.egg-info/entry_points.txt
+[0.964s] writing requirements to gps_path.egg-info/requires.txt
+[0.964s] writing top-level names to gps_path.egg-info/top_level.txt
+[0.964s] writing manifest file 'gps_path.egg-info/SOURCES.txt'
+[0.965s] reading manifest file 'gps_path.egg-info/SOURCES.txt'
+[0.965s] writing manifest file 'gps_path.egg-info/SOURCES.txt'
+[0.966s] running build_ext
+[0.966s] Creating /home/euntaek/ws_mobile/install/gps_path/lib/python3.10/site-packages/gps-path.egg-link (link to .)
+[0.966s] Installing gps_centerline_node script to /home/euntaek/ws_mobile/install/gps_path/lib/gps_path
+[0.966s] 
+[0.966s] Installed /home/euntaek/ws_mobile/build/gps_path
+[0.967s] running symlink_data
+[0.967s] creating /home/euntaek/ws_mobile/install/gps_path/share/ament_index
+[0.967s] creating /home/euntaek/ws_mobile/install/gps_path/share/ament_index/resource_index
+[0.967s] creating /home/euntaek/ws_mobile/install/gps_path/share/ament_index/resource_index/packages
+[0.967s] symbolically linking /home/euntaek/ws_mobile/build/gps_path/resource/gps_path -> /home/euntaek/ws_mobile/install/gps_path/share/ament_index/resource_index/packages
+[0.967s] symbolically linking /home/euntaek/ws_mobile/build/gps_path/package.xml -> /home/euntaek/ws_mobile/install/gps_path/share/gps_path
+[0.967s] creating /home/euntaek/ws_mobile/install/gps_path/share/gps_path/launch
+[0.967s] symbolically linking /home/euntaek/ws_mobile/build/gps_path/launch/gps_centerline.launch.py -> /home/euntaek/ws_mobile/install/gps_path/share/gps_path/launch
+[0.967s] creating /home/euntaek/ws_mobile/install/gps_path/share/gps_path/data
+[0.967s] symbolically linking /home/euntaek/ws_mobile/build/gps_path/data/left_lane.csv -> /home/euntaek/ws_mobile/install/gps_path/share/gps_path/data
+[0.967s] symbolically linking /home/euntaek/ws_mobile/build/gps_path/data/right_lane.csv -> /home/euntaek/ws_mobile/install/gps_path/share/gps_path/data
+[0.984s] Invoked command in '/home/euntaek/ws_mobile/build/gps_path' returned '0': PYTHONPATH=/home/euntaek/ws_mobile/build/gps_path/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/gps_path/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/euntaek/ws_mobile/build/gps_path/build --no-deps symlink_data

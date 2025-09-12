@@ -1,1 +1,0 @@
-/home/euntaek/ws_mobile/src/lidar_perception_pkg/setup.py

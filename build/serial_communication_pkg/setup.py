@@ -1,1 +1,0 @@
-/home/euntaek/ws_mobile/src/serial_communication_pkg/setup.py

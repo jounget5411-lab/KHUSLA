@@ -1,0 +1,21 @@
+[0.965s] Invoking command in '/home/euntaek/ws_mobile/src/serial_communication_pkg': PYTHONPATH=/home/euntaek/ws_mobile/build/serial_communication_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/serial_communication_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/serial_communication_pkg build --build-base /home/euntaek/ws_mobile/build/serial_communication_pkg/build install --record /home/euntaek/ws_mobile/build/serial_communication_pkg/install.log --single-version-externally-managed install_data
+[1.097s] running egg_info
+[1.097s] writing ../../build/serial_communication_pkg/serial_communication_pkg.egg-info/PKG-INFO
+[1.098s] writing dependency_links to ../../build/serial_communication_pkg/serial_communication_pkg.egg-info/dependency_links.txt
+[1.098s] writing entry points to ../../build/serial_communication_pkg/serial_communication_pkg.egg-info/entry_points.txt
+[1.098s] writing requirements to ../../build/serial_communication_pkg/serial_communication_pkg.egg-info/requires.txt
+[1.098s] writing top-level names to ../../build/serial_communication_pkg/serial_communication_pkg.egg-info/top_level.txt
+[1.099s] reading manifest file '../../build/serial_communication_pkg/serial_communication_pkg.egg-info/SOURCES.txt'
+[1.100s] writing manifest file '../../build/serial_communication_pkg/serial_communication_pkg.egg-info/SOURCES.txt'
+[1.100s] running build
+[1.100s] running build_py
+[1.100s] running install
+[1.100s] running install_lib
+[1.101s] running install_data
+[1.101s] running install_egg_info
+[1.102s] removing '/home/euntaek/ws_mobile/install/serial_communication_pkg/lib/python3.10/site-packages/serial_communication_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[1.102s] Copying ../../build/serial_communication_pkg/serial_communication_pkg.egg-info to /home/euntaek/ws_mobile/install/serial_communication_pkg/lib/python3.10/site-packages/serial_communication_pkg-0.0.0-py3.10.egg-info
+[1.102s] running install_scripts
+[1.114s] Installing serial_sender_node script to /home/euntaek/ws_mobile/install/serial_communication_pkg/lib/serial_communication_pkg
+[1.114s] writing list of installed files to '/home/euntaek/ws_mobile/build/serial_communication_pkg/install.log'
+[1.137s] Invoked command in '/home/euntaek/ws_mobile/src/serial_communication_pkg' returned '0': PYTHONPATH=/home/euntaek/ws_mobile/build/serial_communication_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/serial_communication_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/serial_communication_pkg build --build-base /home/euntaek/ws_mobile/build/serial_communication_pkg/build install --record /home/euntaek/ws_mobile/build/serial_communication_pkg/install.log --single-version-externally-managed install_data

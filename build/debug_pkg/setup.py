@@ -1,1 +1,0 @@
-/home/euntaek/ws_mobile/src/debug_pkg/setup.py

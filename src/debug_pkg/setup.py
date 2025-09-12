@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'path_visualizer_node = debug_pkg.path_visualizer_node:main',	
             'yolo_visualizer_node = debug_pkg.yolo_visualizer_node:main',
+            'pp_preview_viz = debug_pkg.pp_preview_viz:main',
             'gps_path_visualizer_node = debug_pkg.gps_path_visualizer_node:main',	
         ],
     },

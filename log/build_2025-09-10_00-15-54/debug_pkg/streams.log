@@ -1,0 +1,32 @@
+[0.304s] Invoking command in '/home/euntaek/ws_mobile/src/debug_pkg': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/debug_pkg build --build-base /home/euntaek/ws_mobile/build/debug_pkg/build install --record /home/euntaek/ws_mobile/build/debug_pkg/install.log --single-version-externally-managed install_data
+[0.427s] running egg_info
+[0.427s] writing ../../build/debug_pkg/debug_pkg.egg-info/PKG-INFO
+[0.427s] writing dependency_links to ../../build/debug_pkg/debug_pkg.egg-info/dependency_links.txt
+[0.427s] writing entry points to ../../build/debug_pkg/debug_pkg.egg-info/entry_points.txt
+[0.428s] writing requirements to ../../build/debug_pkg/debug_pkg.egg-info/requires.txt
+[0.428s] writing top-level names to ../../build/debug_pkg/debug_pkg.egg-info/top_level.txt
+[0.428s] reading manifest file '../../build/debug_pkg/debug_pkg.egg-info/SOURCES.txt'
+[0.429s] writing manifest file '../../build/debug_pkg/debug_pkg.egg-info/SOURCES.txt'
+[0.429s] running build
+[0.429s] running build_py
+[0.429s] copying debug_pkg/pp_preview_viz.py -> /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg
+[0.429s] running install
+[0.429s] running install_lib
+[0.430s] copying /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg/pp_preview_viz.py -> /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg
+[0.430s] byte-compiling /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg/pp_preview_viz.py to pp_preview_viz.cpython-310.pyc
+[0.430s]   File "/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg/pp_preview_viz.py", line 6
+[0.430s]     from rclpy.qos import QoSProfile, QoSHist oryPolicy, QoSDurabilityPolicy, QoSReliabilityPolicy
+[0.430s]                                               ^^^^^^^^^
+[0.430s] SyntaxError: invalid syntax
+[0.430s] 
+[0.430s] running install_data
+[0.430s] running install_egg_info
+[0.431s] removing '/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.431s] Copying ../../build/debug_pkg/debug_pkg.egg-info to /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg-0.0.0-py3.10.egg-info
+[0.432s] running install_scripts
+[0.442s] Installing gps_path_visualizer_node script to /home/euntaek/ws_mobile/install/debug_pkg/lib/debug_pkg
+[0.442s] Installing path_visualizer_node script to /home/euntaek/ws_mobile/install/debug_pkg/lib/debug_pkg
+[0.442s] Installing pp_preview_viz script to /home/euntaek/ws_mobile/install/debug_pkg/lib/debug_pkg
+[0.442s] Installing yolo_visualizer_node script to /home/euntaek/ws_mobile/install/debug_pkg/lib/debug_pkg
+[0.442s] writing list of installed files to '/home/euntaek/ws_mobile/build/debug_pkg/install.log'
+[0.456s] Invoked command in '/home/euntaek/ws_mobile/src/debug_pkg' returned '0': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/debug_pkg build --build-base /home/euntaek/ws_mobile/build/debug_pkg/build install --record /home/euntaek/ws_mobile/build/debug_pkg/install.log --single-version-externally-managed install_data

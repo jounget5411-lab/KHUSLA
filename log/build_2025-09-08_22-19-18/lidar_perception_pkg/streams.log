@@ -1,0 +1,26 @@
+[0.747s] Invoking command in '/home/euntaek/ws_mobile/build/lidar_perception_pkg': PYTHONPATH=/home/euntaek/ws_mobile/build/lidar_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/lidar_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/euntaek/ws_mobile/build/lidar_perception_pkg/build --no-deps symlink_data
+[0.883s] running develop
+[0.961s] running egg_info
+[0.961s] creating lidar_perception_pkg.egg-info
+[0.961s] writing lidar_perception_pkg.egg-info/PKG-INFO
+[0.961s] writing dependency_links to lidar_perception_pkg.egg-info/dependency_links.txt
+[0.961s] writing entry points to lidar_perception_pkg.egg-info/entry_points.txt
+[0.961s] writing requirements to lidar_perception_pkg.egg-info/requires.txt
+[0.961s] writing top-level names to lidar_perception_pkg.egg-info/top_level.txt
+[0.961s] writing manifest file 'lidar_perception_pkg.egg-info/SOURCES.txt'
+[0.962s] reading manifest file 'lidar_perception_pkg.egg-info/SOURCES.txt'
+[0.962s] writing manifest file 'lidar_perception_pkg.egg-info/SOURCES.txt'
+[0.963s] running build_ext
+[0.963s] Creating /home/euntaek/ws_mobile/install/lidar_perception_pkg/lib/python3.10/site-packages/lidar-perception-pkg.egg-link (link to .)
+[0.963s] Installing lidar_obstacle_detector_node script to /home/euntaek/ws_mobile/install/lidar_perception_pkg/lib/lidar_perception_pkg
+[0.964s] Installing lidar_processor_node script to /home/euntaek/ws_mobile/install/lidar_perception_pkg/lib/lidar_perception_pkg
+[0.964s] Installing lidar_publisher_node script to /home/euntaek/ws_mobile/install/lidar_perception_pkg/lib/lidar_perception_pkg
+[0.964s] 
+[0.964s] Installed /home/euntaek/ws_mobile/build/lidar_perception_pkg
+[0.964s] running symlink_data
+[0.964s] creating /home/euntaek/ws_mobile/install/lidar_perception_pkg/share/ament_index
+[0.964s] creating /home/euntaek/ws_mobile/install/lidar_perception_pkg/share/ament_index/resource_index
+[0.964s] creating /home/euntaek/ws_mobile/install/lidar_perception_pkg/share/ament_index/resource_index/packages
+[0.964s] symbolically linking /home/euntaek/ws_mobile/build/lidar_perception_pkg/resource/lidar_perception_pkg -> /home/euntaek/ws_mobile/install/lidar_perception_pkg/share/ament_index/resource_index/packages
+[0.964s] symbolically linking /home/euntaek/ws_mobile/build/lidar_perception_pkg/package.xml -> /home/euntaek/ws_mobile/install/lidar_perception_pkg/share/lidar_perception_pkg
+[0.987s] Invoked command in '/home/euntaek/ws_mobile/build/lidar_perception_pkg' returned '0': PYTHONPATH=/home/euntaek/ws_mobile/build/lidar_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/lidar_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/euntaek/ws_mobile/build/lidar_perception_pkg/build --no-deps symlink_data

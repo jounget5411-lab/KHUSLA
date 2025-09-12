@@ -1,1 +1,1 @@
-geometry_msgs:interfaces_pkg:nav_msgs:python3-numpy:python3-pyproj:rclpy:std_msgs:tf2_geometry_msgs:tf2_ros:tf_transformations
+interfaces_pkg:nav_msgs:python3-numpy:python3-pyproj:rclpy:std_msgs:tf_transformations

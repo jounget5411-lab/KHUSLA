@@ -1,0 +1,56 @@
+[0.774s] Invoking command in '/home/euntaek/ws_mobile/build/camera_perception_pkg': PYTHONPATH=/home/euntaek/ws_mobile/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/euntaek/ws_mobile/build/camera_perception_pkg/build
+[0.917s] running develop
+[0.998s] Removing /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera-perception-pkg.egg-link (link to .)
+[1.022s] Invoked command in '/home/euntaek/ws_mobile/build/camera_perception_pkg' returned '0': PYTHONPATH=/home/euntaek/ws_mobile/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/euntaek/ws_mobile/build/camera_perception_pkg/build
+[1.023s] Invoking command in '/home/euntaek/ws_mobile/src/camera_perception_pkg': PYTHONPATH=/home/euntaek/ws_mobile/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/camera_perception_pkg build --build-base /home/euntaek/ws_mobile/build/camera_perception_pkg/build install --record /home/euntaek/ws_mobile/build/camera_perception_pkg/install.log --single-version-externally-managed install_data --force
+[1.159s] running egg_info
+[1.160s] writing ../../build/camera_perception_pkg/camera_perception_pkg.egg-info/PKG-INFO
+[1.160s] writing dependency_links to ../../build/camera_perception_pkg/camera_perception_pkg.egg-info/dependency_links.txt
+[1.160s] writing entry points to ../../build/camera_perception_pkg/camera_perception_pkg.egg-info/entry_points.txt
+[1.160s] writing requirements to ../../build/camera_perception_pkg/camera_perception_pkg.egg-info/requires.txt
+[1.160s] writing top-level names to ../../build/camera_perception_pkg/camera_perception_pkg.egg-info/top_level.txt
+[1.161s] reading manifest file '../../build/camera_perception_pkg/camera_perception_pkg.egg-info/SOURCES.txt'
+[1.161s] writing manifest file '../../build/camera_perception_pkg/camera_perception_pkg.egg-info/SOURCES.txt'
+[1.161s] running build
+[1.161s] running build_py
+[1.161s] creating /home/euntaek/ws_mobile/build/camera_perception_pkg/build
+[1.162s] creating /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib
+[1.162s] creating /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg
+[1.162s] copying camera_perception_pkg/lane_info_extractor_node.py -> /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg
+[1.162s] copying camera_perception_pkg/yolov8_node.py -> /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg
+[1.162s] copying camera_perception_pkg/traffic_light_detector_node.py -> /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg
+[1.163s] copying camera_perception_pkg/__init__.py -> /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg
+[1.163s] copying camera_perception_pkg/image_publisher_node.py -> /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg
+[1.163s] creating /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg/lib
+[1.163s] copying camera_perception_pkg/lib/__init__.py -> /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg/lib
+[1.163s] copying camera_perception_pkg/lib/camera_perception_func_lib.py -> /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg/lib
+[1.163s] running install
+[1.163s] running install_lib
+[1.164s] creating /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg
+[1.164s] copying /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg/lane_info_extractor_node.py -> /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg
+[1.164s] copying /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg/yolov8_node.py -> /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg
+[1.164s] copying /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg/traffic_light_detector_node.py -> /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg
+[1.164s] copying /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg/__init__.py -> /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg
+[1.164s] creating /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg/lib
+[1.164s] copying /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg/lib/__init__.py -> /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg/lib
+[1.164s] copying /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg/lib/camera_perception_func_lib.py -> /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg/lib
+[1.164s] copying /home/euntaek/ws_mobile/build/camera_perception_pkg/build/lib/camera_perception_pkg/image_publisher_node.py -> /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg
+[1.164s] byte-compiling /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg/lane_info_extractor_node.py to lane_info_extractor_node.cpython-310.pyc
+[1.165s] byte-compiling /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg/yolov8_node.py to yolov8_node.cpython-310.pyc
+[1.165s] byte-compiling /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg/traffic_light_detector_node.py to traffic_light_detector_node.cpython-310.pyc
+[1.165s] byte-compiling /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg/__init__.py to __init__.cpython-310.pyc
+[1.165s] byte-compiling /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg/lib/__init__.py to __init__.cpython-310.pyc
+[1.165s] byte-compiling /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg/lib/camera_perception_func_lib.py to camera_perception_func_lib.cpython-310.pyc
+[1.166s] byte-compiling /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg/image_publisher_node.py to image_publisher_node.cpython-310.pyc
+[1.166s] running install_data
+[1.167s] copying resource/camera_perception_pkg -> /home/euntaek/ws_mobile/install/camera_perception_pkg/share/ament_index/resource_index/packages
+[1.167s] copying package.xml -> /home/euntaek/ws_mobile/install/camera_perception_pkg/share/camera_perception_pkg
+[1.167s] running install_egg_info
+[1.167s] Copying ../../build/camera_perception_pkg/camera_perception_pkg.egg-info to /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages/camera_perception_pkg-0.0.0-py3.10.egg-info
+[1.168s] running install_scripts
+[1.179s] Installing image_publisher_node script to /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/camera_perception_pkg
+[1.179s] Installing lane_info_extractor_node script to /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/camera_perception_pkg
+[1.179s] Installing traffic_light_detector_node script to /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/camera_perception_pkg
+[1.179s] Installing yolov8_node script to /home/euntaek/ws_mobile/install/camera_perception_pkg/lib/camera_perception_pkg
+[1.179s] writing list of installed files to '/home/euntaek/ws_mobile/build/camera_perception_pkg/install.log'
+[1.395s] Invoked command in '/home/euntaek/ws_mobile/src/camera_perception_pkg' returned '0': PYTHONPATH=/home/euntaek/ws_mobile/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/camera_perception_pkg build --build-base /home/euntaek/ws_mobile/build/camera_perception_pkg/build install --record /home/euntaek/ws_mobile/build/camera_perception_pkg/install.log --single-version-externally-managed install_data --force

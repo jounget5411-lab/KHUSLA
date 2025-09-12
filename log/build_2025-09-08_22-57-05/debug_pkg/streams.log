@@ -1,0 +1,49 @@
+[0.485s] Invoking command in '/home/euntaek/ws_mobile/build/debug_pkg': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/euntaek/ws_mobile/build/debug_pkg/build
+[0.624s] running develop
+[0.702s] Removing /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug-pkg.egg-link (link to .)
+[0.719s] Invoked command in '/home/euntaek/ws_mobile/build/debug_pkg' returned '0': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/euntaek/ws_mobile/build/debug_pkg/build
+[0.719s] Invoking command in '/home/euntaek/ws_mobile/src/debug_pkg': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/debug_pkg build --build-base /home/euntaek/ws_mobile/build/debug_pkg/build install --record /home/euntaek/ws_mobile/build/debug_pkg/install.log --single-version-externally-managed install_data --force
+[0.851s] running egg_info
+[0.851s] writing ../../build/debug_pkg/debug_pkg.egg-info/PKG-INFO
+[0.851s] writing dependency_links to ../../build/debug_pkg/debug_pkg.egg-info/dependency_links.txt
+[0.851s] writing entry points to ../../build/debug_pkg/debug_pkg.egg-info/entry_points.txt
+[0.851s] writing requirements to ../../build/debug_pkg/debug_pkg.egg-info/requires.txt
+[0.851s] writing top-level names to ../../build/debug_pkg/debug_pkg.egg-info/top_level.txt
+[0.852s] reading manifest file '../../build/debug_pkg/debug_pkg.egg-info/SOURCES.txt'
+[0.853s] writing manifest file '../../build/debug_pkg/debug_pkg.egg-info/SOURCES.txt'
+[0.853s] running build
+[0.853s] running build_py
+[0.853s] creating /home/euntaek/ws_mobile/build/debug_pkg/build
+[0.853s] creating /home/euntaek/ws_mobile/build/debug_pkg/build/lib
+[0.853s] creating /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg
+[0.853s] copying debug_pkg/gps_path_visualizer_node.py -> /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg
+[0.853s] copying debug_pkg/yolo_visualizer_node.py -> /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg
+[0.853s] copying debug_pkg/__init__.py -> /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg
+[0.854s] copying debug_pkg/path_visualizer_node.py -> /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg
+[0.854s] creating /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg/lib
+[0.854s] copying debug_pkg/lib/__init__.py -> /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg/lib
+[0.854s] running install
+[0.854s] running install_lib
+[0.854s] creating /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg
+[0.854s] copying /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg/gps_path_visualizer_node.py -> /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg
+[0.854s] copying /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg/yolo_visualizer_node.py -> /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg
+[0.854s] copying /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg/__init__.py -> /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg
+[0.854s] copying /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg/path_visualizer_node.py -> /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg
+[0.854s] creating /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg/lib
+[0.854s] copying /home/euntaek/ws_mobile/build/debug_pkg/build/lib/debug_pkg/lib/__init__.py -> /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg/lib
+[0.855s] byte-compiling /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg/gps_path_visualizer_node.py to gps_path_visualizer_node.cpython-310.pyc
+[0.855s] byte-compiling /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg/yolo_visualizer_node.py to yolo_visualizer_node.cpython-310.pyc
+[0.857s] byte-compiling /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg/__init__.py to __init__.cpython-310.pyc
+[0.857s] byte-compiling /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg/path_visualizer_node.py to path_visualizer_node.cpython-310.pyc
+[0.857s] byte-compiling /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg/lib/__init__.py to __init__.cpython-310.pyc
+[0.857s] running install_data
+[0.858s] copying resource/debug_pkg -> /home/euntaek/ws_mobile/install/debug_pkg/share/ament_index/resource_index/packages
+[0.858s] copying package.xml -> /home/euntaek/ws_mobile/install/debug_pkg/share/debug_pkg
+[0.858s] running install_egg_info
+[0.859s] Copying ../../build/debug_pkg/debug_pkg.egg-info to /home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg-0.0.0-py3.10.egg-info
+[0.859s] running install_scripts
+[0.869s] Installing gps_path_visualizer_node script to /home/euntaek/ws_mobile/install/debug_pkg/lib/debug_pkg
+[0.869s] Installing path_visualizer_node script to /home/euntaek/ws_mobile/install/debug_pkg/lib/debug_pkg
+[0.869s] Installing yolo_visualizer_node script to /home/euntaek/ws_mobile/install/debug_pkg/lib/debug_pkg
+[0.869s] writing list of installed files to '/home/euntaek/ws_mobile/build/debug_pkg/install.log'
+[0.886s] Invoked command in '/home/euntaek/ws_mobile/src/debug_pkg' returned '0': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/debug_pkg build --build-base /home/euntaek/ws_mobile/build/debug_pkg/build install --record /home/euntaek/ws_mobile/build/debug_pkg/install.log --single-version-externally-managed install_data --force

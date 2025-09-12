@@ -137,41 +137,65 @@ def generate_launch_description():
     # =========================
     ekf_local_yaml   = os.path.join(pkg_mobile_robot, 'parameters', 'ekf_local.yaml')
     navsat_yaml      = os.path.join(pkg_mobile_robot, 'parameters', 'navsat.yaml')
-    ekf_global_yaml  = os.path.join(pkg_mobile_robot, 'parameters', 'ekf_global.yaml')  # ✅ 신규
+    ekf_global_yaml  = os.path.join(pkg_mobile_robot, 'parameters', 'ekf_global.yaml')
 
+    # ekf_local: 출력 토픽을 /odometry/filtered_local 로 고정
     ekf_local = Node(
         package='robot_localization',
         executable='ekf_node',
-        name='ekf_local',                           # ✅ YAML top-key와 일치
+        name='ekf_local',
         output='screen',
         parameters=[ekf_local_yaml, {'use_sim_time': True}],
+        remappings=[('/odometry/filtered', '/odometry/filtered_local')],
     )
 
+    # navsat: yaw 입력을 filtered_local 로 받게 리매핑
     navsat = Node(
         package='robot_localization',
         executable='navsat_transform_node',
-        name='navsat_transform',                    # ✅ YAML top-key와 일치시키기
+        name='navsat_transform',
         output='screen',
         remappings=[
             ('/imu', '/imu/with_cov'),
             ('/imu/data', '/imu/with_cov'),
             ('/gps/fix', '/gps/fix'),
-            ('/odometry/filtered', '/odometry/filtered'),
-            ('/odometry/gps', '/gps/odom'),        # ✅ navsat 출력 ENU Odom → /gps/odom
+            ('/odometry/filtered', '/odometry/filtered_local'),  # ★ 로컬 EKF
+            ('/odometry/gps', '/gps/odom'),
         ],
         parameters=[navsat_yaml, {'use_sim_time': True}],
     )
 
-    # ✅ 글로벌 EKF 추가: /odometry/filtered_map + TF(map→odom) 발행
+    # FastDDS SHM off (옵션)
+    disable_shm = SetEnvironmentVariable('RMW_FASTDDS_USE_SHM', '0')
+
+    # map → utm 정적 TF (평행이동만)
+    tf_map_to_utm = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='tf_map_to_utm',
+        arguments=[
+            '-332254.927093',
+            '-4128604.136462',
+            '0',
+            '0', '0', '0',
+            'map',
+            'utm'
+        ],
+        output='screen',
+    )
+
+    # ekf_global: 출력만 /odometry/filtered_map 으로 리매핑
+    # (입력은 ekf_global.yaml에서 odom0: /odometry/filtered_local 로 설정되어 있어야 함)
     ekf_global = Node(
         package='robot_localization',
         executable='ekf_node',
-        name='ekf_global',                          # ✅ YAML top-key와 일치
+        name='ekf_global',
         output='screen',
         parameters=[ekf_global_yaml, {'use_sim_time': True}],
+        remappings=[('/odometry/filtered', '/odometry/filtered_map')],  # ★ 출력 리매핑
     )
 
-    # --- 차량 인터페이스 ---
+    # 차량 인터페이스
     veh_if = Node(
         package='mobile_robot',
         executable='vehicle_interface.py',
@@ -179,7 +203,7 @@ def generate_launch_description():
         parameters=[{'use_sim_time': True}],
     )
 
-    # --- 중앙선 발행 ---
+    # 중앙선 발행
     left_csv_path  = os.path.join(pkg_gps_path, 'data', 'left_lane.csv')
     right_csv_path = os.path.join(pkg_gps_path, 'data', 'right_lane.csv')
     gps_centerline_node = Node(
@@ -195,7 +219,7 @@ def generate_launch_description():
         ],
     )
 
-    # --- 판단부 ---
+    # 판단부
     path_planner_node = Node(
         package='decision_making_pkg',
         executable='path_planner_node',
@@ -203,7 +227,7 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_sim_time': True,
-            'sub_odom_topic': '/odometry/filtered_map',  # ✅ map 기준만 사용
+            'sub_odom_topic': '/odometry/filtered_map',
             'sub_path_topic': '/gps/centerline',
         }],
     )
@@ -215,8 +239,16 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_sim_time': True,
-            'sub_odom_topic': '/odometry/filtered_map',  # ✅ 동일
+            'sub_odom_topic': '/odometry/filtered_map',
         }],
+    )
+
+    pp_result_viz = Node(
+        package='debug_pkg',
+        executable='pp_preview_viz',
+        name='pp_result_viz',
+        output='screen',
+        parameters=[{'use_sim_time': True, 'fixed_frame': 'map', 'base_frame': 'base_footprint'}],
     )
 
     return LaunchDescription([
@@ -231,9 +263,12 @@ def generate_launch_description():
         imu_cov,
         ekf_local,
         navsat,
-        ekf_global,              # ✅ 추가
+        disable_shm,
+        tf_map_to_utm,
+        ekf_global,
         gps_centerline_node,
         path_planner_node,
         motion_planner_node,
         veh_if,
+        pp_result_viz,
     ])

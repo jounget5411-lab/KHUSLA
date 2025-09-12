@@ -1,0 +1,5 @@
+  File "/home/euntaek/ws_mobile/install/debug_pkg/lib/python3.10/site-packages/debug_pkg/pp_preview_viz.py", line 6
+    from rclpy.qos import QoSProfile, QoSHist oryPolicy, QoSDurabilityPolicy, QoSReliabilityPolicy
+                                              ^^^^^^^^^
+SyntaxError: invalid syntax
+

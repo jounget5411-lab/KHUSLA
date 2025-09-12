@@ -1,0 +1,48 @@
+[0.481s] Invoking command in '/home/euntaek/ws_mobile/build/decision_making_pkg': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/euntaek/ws_mobile/build/decision_making_pkg/build
+[0.621s] running develop
+[0.699s] Removing /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision-making-pkg.egg-link (link to .)
+[0.717s] Invoked command in '/home/euntaek/ws_mobile/build/decision_making_pkg' returned '0': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/euntaek/ws_mobile/build/decision_making_pkg/build
+[0.718s] Invoking command in '/home/euntaek/ws_mobile/src/decision_making_pkg': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/decision_making_pkg build --build-base /home/euntaek/ws_mobile/build/decision_making_pkg/build install --record /home/euntaek/ws_mobile/build/decision_making_pkg/install.log --single-version-externally-managed install_data --force
+[0.848s] running egg_info
+[0.848s] writing ../../build/decision_making_pkg/decision_making_pkg.egg-info/PKG-INFO
+[0.848s] writing dependency_links to ../../build/decision_making_pkg/decision_making_pkg.egg-info/dependency_links.txt
+[0.848s] writing entry points to ../../build/decision_making_pkg/decision_making_pkg.egg-info/entry_points.txt
+[0.849s] writing requirements to ../../build/decision_making_pkg/decision_making_pkg.egg-info/requires.txt
+[0.849s] writing top-level names to ../../build/decision_making_pkg/decision_making_pkg.egg-info/top_level.txt
+[0.849s] reading manifest file '../../build/decision_making_pkg/decision_making_pkg.egg-info/SOURCES.txt'
+[0.850s] writing manifest file '../../build/decision_making_pkg/decision_making_pkg.egg-info/SOURCES.txt'
+[0.850s] running build
+[0.850s] running build_py
+[0.850s] creating /home/euntaek/ws_mobile/build/decision_making_pkg/build
+[0.850s] creating /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib
+[0.850s] creating /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg
+[0.850s] copying decision_making_pkg/__init__.py -> /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg
+[0.850s] copying decision_making_pkg/motion_planner_node.py -> /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg
+[0.850s] copying decision_making_pkg/path_planner_node.py -> /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg
+[0.850s] creating /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg/lib
+[0.850s] copying decision_making_pkg/lib/__init__.py -> /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg/lib
+[0.851s] copying decision_making_pkg/lib/decision_making_function_lib.py -> /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg/lib
+[0.851s] running install
+[0.851s] running install_lib
+[0.851s] creating /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg
+[0.851s] copying /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg/__init__.py -> /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg
+[0.851s] creating /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg/lib
+[0.851s] copying /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg/lib/__init__.py -> /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg/lib
+[0.851s] copying /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg/lib/decision_making_function_lib.py -> /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg/lib
+[0.851s] copying /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg/motion_planner_node.py -> /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg
+[0.851s] copying /home/euntaek/ws_mobile/build/decision_making_pkg/build/lib/decision_making_pkg/path_planner_node.py -> /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg
+[0.852s] byte-compiling /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg/__init__.py to __init__.cpython-310.pyc
+[0.852s] byte-compiling /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg/lib/__init__.py to __init__.cpython-310.pyc
+[0.852s] byte-compiling /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg/lib/decision_making_function_lib.py to decision_making_function_lib.cpython-310.pyc
+[0.852s] byte-compiling /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg/motion_planner_node.py to motion_planner_node.cpython-310.pyc
+[0.853s] byte-compiling /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg/path_planner_node.py to path_planner_node.cpython-310.pyc
+[0.854s] running install_data
+[0.854s] copying resource/decision_making_pkg -> /home/euntaek/ws_mobile/install/decision_making_pkg/share/ament_index/resource_index/packages
+[0.854s] copying package.xml -> /home/euntaek/ws_mobile/install/decision_making_pkg/share/decision_making_pkg
+[0.854s] running install_egg_info
+[0.855s] Copying ../../build/decision_making_pkg/decision_making_pkg.egg-info to /home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages/decision_making_pkg-0.0.0-py3.10.egg-info
+[0.856s] running install_scripts
+[0.866s] Installing motion_planner_node script to /home/euntaek/ws_mobile/install/decision_making_pkg/lib/decision_making_pkg
+[0.866s] Installing path_planner_node script to /home/euntaek/ws_mobile/install/decision_making_pkg/lib/decision_making_pkg
+[0.866s] writing list of installed files to '/home/euntaek/ws_mobile/build/decision_making_pkg/install.log'
+[0.879s] Invoked command in '/home/euntaek/ws_mobile/src/decision_making_pkg' returned '0': CMAKE_PREFIX_PATH=/home/euntaek/ws_mobile/install/interfaces_pkg:/home/euntaek/ws_mobile/install/urdf_test_pkg:/home/euntaek/ws_mobile/install/my_robot_description:/home/euntaek/ws_mobile/install/mobile_robot PYTHONPATH=/home/euntaek/ws_mobile/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/euntaek/ws_mobile/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/decision_making_pkg build --build-base /home/euntaek/ws_mobile/build/decision_making_pkg/build install --record /home/euntaek/ws_mobile/build/decision_making_pkg/install.log --single-version-externally-managed install_data --force
